@@ -1,0 +1,419 @@
+footer ul{
+    padding-left: 0;
+}
+
+.footer-text{
+    margin-top: 20px;
+}
+
+.bg-black{
+    background-color: rgba(0,0,0,1);;
+}
+.bg-grey-dark{
+    background-color: #111;
+}
+.bg-grey-light{
+    background-color: #333;
+}
+.text-grey-dark{
+    color: #333;
+}
+.text-red{
+    color: #f00;
+}
+.text-grey-light{
+    color: #acacac;
+}
+.text-yellow {
+    color: #ffcc00;
+}
+.text-white{
+    color: white;
+}
+#main-nav .btn-login{
+    margin-top: 2%;
+}
+.btn-login{
+    background-color: #323232;
+    color: #fff;
+    border: 1px solid white;
+}
+.btn-login:hover, .btn-login:focus{
+    background-color: #4D4D4D;
+    color: #fff;
+}
+
+.wrapper-1170{
+    max-width: 1170px;
+}
+.footer-payment-method-color li{
+    background-image: url('../img/payment-logos-color.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 3px 6px;
+    vertical-align: middle;
+}
+.footer-payment-method-color .mastercard{
+    background-position: -465px 0px;
+    width: 35px;
+    height: 23px;
+}
+.footer-payment-method-color .visa{
+    background-position: -399px 0px;
+    width: 58px;
+    height: 23px;
+
+}
+.footer-payment-method-color .neteller{
+    background-position: -94px -33px;
+    width: 89px;
+    height: 23px;
+
+}
+.footer-payment-method-color .skrill{
+    background-position: -507px 1px;
+    width: 58px;
+    height: 23px;
+
+}
+.footer-payment-method-color .paysafecard{
+    background-position: -229px 0px;
+    width: 126px;
+    height: 23px;
+}
+.footer-payment-method-color .neosurf{
+    background-position: -158px 0px;
+    width: 56px;
+    height: 23px;
+}
+.footer-payment-method-color .paypal{
+    background-position: -12px 3px;
+    width: 73px;
+    height: 23px;
+}
+.footer-payment-method-color .moneyclic{
+    background-position: -13px -31px;
+    width: 67px;
+    height: 31px;
+}
+.footer-payment-method-color .cb{
+    background-position: -361px 0px;
+    width: 33px;
+    height: 23px;
+}
+.footer-payment-method-color .ticketpremium{
+    background-position: -196px -34px;
+    width: 92px;
+    height: 23px;
+}
+.footer-payment-method-color .virementBancaire{
+    background-position: -93px 1px;
+    width: 55px;
+    height: 23px;
+}
+
+.footer-payment-method li {
+    background-image: url('../img/payment-logos.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 3px 6px;
+    vertical-align: middle;
+}
+
+.footer-payment-method .mastercard {
+    background-position: -345px 0;
+    width: 38px;
+    height: 23px;
+}
+.footer-payment-method .visa {
+    background-position: -862px 0;
+    width: 41px;
+    height: 14px;
+}
+.footer-payment-method .clickandbuy {
+    background-position: -115px 0;
+    width: 99px;
+    height: 16px;
+}
+.footer-payment-method .moneybookers {
+    background-position: -434px 0;
+    width: 41px;
+    height: 18px;
+}
+.footer-payment-method .click2pay {
+    display: none !important;
+    background-position: 0 0;
+    width: 65px;
+    height: 12px;
+}
+.footer-payment-method .neteller {
+    background-position: -525px 0;
+    width: 55px;
+    height: 13px;
+}
+.footer-payment-method .ukash {
+    background-position: -762px 0;
+    width: 50px;
+    height: 17px;
+}
+.footer-payment-method .entropay {
+    background-position: -264px 0;
+    width: 31px;
+    height: 20px;
+}
+.footer-payment-method .paysafecard {
+    background-position: -630px 0;
+    width: 82px;
+    height: 15px;
+}
+.footer-payment-method .skrill {
+    background-position: -940px 0;
+    width: 34px;
+    height: 14px;
+}
+.footer-payment-method .online {
+    background-position: -1056px 0;
+    width: 50px;
+    height: 21px;
+}
+.footer-payment-method .dinersclub {
+    background-position: -1002px 0;
+    width: 29px;
+    height: 21px;
+}
+.footer-payment-method .ecard {
+    background-position: -1122px 0;
+    width: 18px;
+    height: 22px;
+}
+.footer-payment-method .sofort {
+    background-position: -1231px -3px;
+    width: 67px;
+    height: 20px;
+}
+.footer-payment-method .webmoney {
+    background-position: -1312px -3px;
+    width: 80px;
+    height: 21px;
+}
+.footer-payment-method .qiwi {
+    background-position: -1627px 0;
+    width: 62px;
+    height: 23px;
+}
+.footer-payment-method .ticketpremium {
+    display: none !important;
+    background-position: -1525px -3px;
+    width: 93px;
+    height: 22px;
+}
+.footer-payment-method .monetaru {
+    background-position: -1406px 0;
+    width: 100px;
+    height: 20px;
+}
+.footer-payment-method .trustly {
+    background-position: -1775px 0;
+    width: 65px;
+    height: 20px;
+}
+.footer-payment-method .euteller {
+    background-position: -1853px 0;
+    width: 67px;
+    height: 22px;
+    position: relative;
+    top: 2px;
+}
+.footer-payment-method .astropay {
+    background-position: -1700px 0;
+    width: 65px;
+    height: 20px;
+}
+.footer-payment-method .ticketpremium {
+    background-position: -1522px 0;
+    height: 27px;
+    width: 97px;
+}
+.footer-payment-method .paypal {
+    background-position: -2198px 0;
+    width: 52px;
+    height: 22px;
+}
+.footer-payment-method .postepay {
+    background-position: -77px -57px;
+    width: 66px;
+    height: 22px;
+}
+.footer-payment-method .worldpay {
+    background-position: 0px -56px;
+    width: 64px;
+    height: 22px;
+}
+.footer-payment-method .hipay {
+    background-position: -154px -55px;
+    width: 47px;
+    height: 32px;
+}
+
+.footer-payment-method .fast-bank {
+    background-position: -221px -53px;
+    width: 61px;
+    height: 32px;
+}
+
+.footer-payment-method .ecopays {
+    background-position: -578px -60px;
+    width: 71px;
+    height: 23px;
+}
+
+.footer-payment-method .entropay {
+    background-position: -367px -58px;
+    width: 81px;
+    height: 23px;
+}
+
+.footer-payment-method .viewspoint {
+    background-position: -451px -53px;
+    width: 116px;
+    height: 32px;
+}
+
+.footer-responsibles-logo li{
+    background-image: url('../img/responsible-logos.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 0;
+    margin: 0 6px 6px;
+    vertical-align: middle;
+}
+.secure-lock {
+    background-position: -505px -58px;
+    width: 74px;
+    height: 39px;
+}
+.aams{
+    background-position: -644px -59px;
+    width: 40px;
+    height: 39px;
+}
+.aams-portal{
+    background-position: -594px -58px;
+    width: 42px;
+    height: 39px;
+}
+.plus18{
+    background-position: -760px -59px;
+    width: 35px;
+    height: 39px;
+}
+.plus21-gr{
+    background-position: -373px -50px;
+    width: 90px;
+    height: 20px;
+}
+.gioca{
+    background-position: -696px -58px;
+    width: 54px;
+    height: 39px;
+}
+
+.gamcare {
+
+    background-position: 0 0;
+    width: 30px;
+    height: 30px;
+    padding: 0 3px !important;
+}
+.adictel {
+    background-position: -34px 0;
+    width: 62px;
+    height: 30px;
+    padding: 0 3px !important;
+}
+.responsiblegaming {
+    background-position: -291px 0;
+    width: 90px;
+    height: 20px;
+}
+.gambleaware {
+    background-position: -426px 0;
+    width: 95px;
+    height: 14px;
+}
+.rng {
+    background-position: -571px 0;
+    width: 89px;
+    height: 23px;
+}
+.ibas {
+    background-position: -704px 0;
+    width: 48px;
+    height: 21px;
+}
+.keoea {
+    background-position: -5px -80px;
+    width: 90px;
+    height: 33px;
+}
+.fun-stop{
+    background-position: -185px -75px;
+    width: 149px;
+    height: 33px;
+}
+.mga{
+    background-position: 1px -126px;
+    width: 54px;
+    height: 33px;
+}
+.mga-white{
+    background-position: -60px -126px;
+    width: 54px;
+    height: 33px;
+}
+.verisign{
+    background-position: -189px -124px;
+    width: 59px;
+    height: 33px;
+}
+.itechlabs{
+    background-position: -137px -124px;
+    width: 30px;
+    height: 33px;
+}
+.gambling-commision{
+    background-position: -99px -72px;
+    width: 81px;
+    height: 33px;
+}
+
+.sponsor-logos li{
+    background-image: url('../img/club-symbols.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 0;
+    margin: 0 6px 6px;
+    vertical-align: middle;
+}
+.asse {
+    background-position: -126px 6px;
+    width: 48px;
+    height: 79px;
+}
+.fcsb{
+    background-position: -186px -1px;
+    width: 50px;
+    height: 63px;
+}
+.hamilton{
+    background-position: -245px 3px;
+    width: 54px;
+    height: 73px;
+}
+.dfc{
+    background-position: -2px 7px;
+    width: 57px;
+    height: 79px;
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 0 FT-->
+<Events>
+  <Event DateTimeGMT="28/05/2016 16:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="England - Championship" LeagueID="22624" ID="14185540" IsOption="0" EventType="0" MEID="5700070">
+    <Participants>
+      <Participant1 Name="Hull City" Home_Visiting="Home" />
+      <Participant2 Name="Sheffield Wed" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="2.2" Draw="3.15" Away="3.4" />
+    <Spread Home_Odds="1.88" Home_Points="-0.25" Away_Points="0.25" Away_Odds="1.9" />
+    <Total Points="2.25" Over="1.98" Under="1.76" />
+  </Event>
+  <Event DateTimeGMT="15/06/2016 13:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786136" IsOption="0" EventType="0" MEID="5246215">
+    <Participants>
+      <Participant1 Name="Russia" Home_Visiting="Home" />
+      <Participant2 Name="Slovakia" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.8" Draw="3.45" Away="4.85" />
+  </Event>
+  <Event DateTimeGMT="15/06/2016 16:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786137" IsOption="0" EventType="0" MEID="5246216">
+    <Participants>
+      <Participant1 Name="Romania" Home_Visiting="Home" />
+      <Participant2 Name="Switzerland" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="4.05" Draw="3.45" Away="1.95" />
+  </Event>
+  <Event DateTimeGMT="15/06/2016 19:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786138" IsOption="0" EventType="0" MEID="5246217">
+    <Participants>
+      <Participant1 Name="France" Home_Visiting="Home" />
+      <Participant2 Name="Albania" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.21" Draw="6.4" Away="13.75" />
+  </Event>
+  <Event DateTimeGMT="16/06/2016 13:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786139" IsOption="0" EventType="0" MEID="5246218">
+    <Participants>
+      <Participant1 Name="England" Home_Visiting="Home" />
+      <Participant2 Name="Wales" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.8" Draw="3.45" Away="4.55" />
+  </Event>
+  <Event DateTimeGMT="16/06/2016 16:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786140" IsOption="0" EventType="0" MEID="5246219">
+    <Participants>
+      <Participant1 Name="Ukraine" Home_Visiting="Home" />
+      <Participant2 Name="Northern Ireland" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.95" Draw="3.35" Away="3.95" />
+  </Event>
+  <Event DateTimeGMT="16/06/2016 19:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786141" IsOption="0" EventType="0" MEID="5246220">
+    <Participants>
+      <Participant1 Name="Germany" Home_Visiting="Home" />
+      <Participant2 Name="Poland" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.61" Draw="3.8" Away="5.55" />
+  </Event>
+  <Event DateTimeGMT="17/06/2016 13:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786142" IsOption="0" EventType="0" MEID="5246221">
+    <Participants>
+      <Participant1 Name="Italy" Home_Visiting="Home" />
+      <Participant2 Name="Sweden" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="2" Draw="3.25" Away="3.9" />
+  </Event>
+  <Event DateTimeGMT="17/06/2016 16:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786143" IsOption="0" EventType="0" MEID="5246222">
+    <Participants>
+      <Participant1 Name="Czech Republic" Home_Visiting="Home" />
+      <Participant2 Name="Croatia" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="3.2" Draw="3.2" Away="2.25" />
+  </Event>
+  <Event DateTimeGMT="17/06/2016 19:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786144" IsOption="0" EventType="0" MEID="5246223">
+    <Participants>
+      <Participant1 Name="Spain" Home_Visiting="Home" />
+      <Participant2 Name="Turkey" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.65" Draw="3.65" Away="5.5" />
+  </Event>
+  <Event DateTimeGMT="18/06/2016 13:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786145" IsOption="0" EventType="0" MEID="5246224">
+    <Participants>
+      <Participant1 Name="Belgium" Home_Visiting="Home" />
+      <Participant2 Name="Ireland" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="1.59" Draw="3.95" Away="5.65" />
+  </Event>
+  <Event DateTimeGMT="18/06/2016 16:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786146" IsOption="0" EventType="0" MEID="5246225">
+    <Participants>
+      <Participant1 Name="Iceland" Home_Visiting="Home" />
+      <Participant2 Name="Hungary" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="2.3" Draw="3.2" Away="3.2" />
+  </Event>
+  <Event DateTimeGMT="18/06/2016 19:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786147" IsOption="0" EventType="0" MEID="5246226">
+    <Participants>
+      <Participant1 Name="Portugal" Home_Visiting="Home" />
+      <Participant2 Name="Austria" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="2.25" Draw="3.2" Away="3.2" />
+  </Event>
+  <Event DateTimeGMT="19/06/2016 19:00:00" Branch="Soccer" Sport="Soccer" BranchID="1" League="Euro 2016" LeagueID="9446" ID="12786148" IsOption="0" EventType="0" MEID="5246227">
+    <Participants>
+      <Participant1 Name="Romania" Home_Visiting="Home" />
+      <Participant2 Name="Albania" Home_Visiting="Visiting" />
+    </Participants>
+    <MoneyLine Home="2" Draw="3.25" Away="4" />
+  </Event>
+
+</Events>

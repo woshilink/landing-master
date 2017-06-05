@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url("../fonts/BebasNeue.otf");
+}
+
+
+
+body{
+	background-color: black;
+}
+.container-fluid{
+	width: 1000px;
+}
+
+nav{
+	background-color: black;
+	color: white;
+}
+.icons{
+  margin-bottom: 21%;
+
+}
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+
+}
+.navbar{
+	margin-bottom: 0;
+}
+#logo{
+	margin: 10px 0 ;
+}
+#logo img{
+	width: 200px;
+}
+.logo button{
+	margin-top: 12px;
+}
+.btn {
+	background-color: #171717;
+}
+.main{
+
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+  height: auto;
+}
+@media only screen and (max-width: 1200px) {
+  .main {height: auto;}
+}
+@media only screen and (max-width: 480px) {
+  .main {height: 305px;}
+}
+.button{
+  margin-bottom: 30%;
+}
+.offer{
+  margin-top: 25%;
+
+    color: white;
+    text-shadow: 0px 1px black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.offer h1{
+
+	color: rgba(250, 255, 50, 0.9);
+
+
+    font-family:  Bebas Neue, sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    margin: 0;
+    font-size: 6em;
+    line-height: 90px;
+}
+.offer h1 span{
+	background-color: rgba(0, 0, 0, 0.28);
+	border-radius: 12px;
+	padding: 10px;
+}
+.offer h2{
+	font-family:  Bebas Neue, sans-serif;
+	margin: 0;
+}
+.offer h2 span{
+	color:red;
+}
+/*************BUTTON******************/
+.button {
+    margin-top: -12%;
+}
+.button img{
+	width: 250px;
+}
+.button a{
+	list-style: none;
+}
+.button a:hover,.button a:focus{
+	text-decoration: none;
+	color: white;
+}
+.happy-icon{
+  margin-top: 6px;
+}
+.support-icon{
+  margin-top: 20px;
+}
+.step{
+    padding: 10px 0 5px 0;
+    color: white;
+    border-right: 5px solid black;
+    margin-bottom: 10px;
+}
+.step h1{
+
+	color: white;
+
+    font-family:  Bebas Neue, sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    margin: 0;
+    font-size: 3em;
+    line-height: 35px;
+}
+.step h2{
+
+	color: #E4B11A;
+
+    font-family:  Bebas Neue, sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    margin: 0;
+    font-size: 2.5em;
+    line-height: 35px;
+}
+.step h4{
+  	color: #E4B11A;
+    font-family:  Bebas Neue, sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    margin: 0;
+}
+
+.step .step-num h1{
+	color: red;
+}
+.num{
+	border-bottom: 2px solid black;
+}
+.licence{
+	margin-top: 20px;
+}
+.licence img {
+	width: 140px;
+}
+.licence-logo-mobile{
+	margin-top: 20px;
+}
+
+.licence-logo-mobile img{
+	width: 150px;
+}
+.footer-text{
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+	color:#666666;
+}
+
+
+ /*==========  Non-Mobile First Method  ==========*/
+/* SUPER Large Devices, Wide Screens */
+@media only screen and (min-width : 1920px) {
+	.main{
+		background-size: contain;
+	}
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.main{
+		/*height: auto;*/
+
+	}
+	.offer{
+		margin-top: 50px;
+	}
+	.offer h1{
+		font-size: 5em;
+		line-height: 60px;
+	}
+	.steps .container{
+		width: 100%;
+	}
+	.steps .container .col-xs-12{
+		padding: 0;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.container-fluid{
+		width: 100%;
+	}
+	.offer h1{
+		line-height: 55px;
+	}
+  .steps {
+    margin-top: 0px;
+  }
+  .happy-icon{
+    margin-top: 0px;
+  }
+  .support-icon{
+    margin-top: 0px;
+  }
+  .icons {
+    margin-bottom: 31%;
+}
+
+
+
+ }
+
+ /* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+  .offer{
+		text-align: center;
+	}
+	.offer h1{
+		line-height: 45px;
+    	font-size: 3.5em;
+
+	}
+	.button{
+		text-align: center;
+	}
+	.action-button{
+		padding: 10px 10%;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .steps {margin-top: 0px;}
+  .button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .box{
+    margin-bottom: 0%;
+  }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+	.offer{
+		margin-top: 10px;
+
+    	border-radius: 15px;
+    	padding: 10px;
+	}
+	.offer h1{
+		line-height: 35px;
+		font-size: 2em;
+	}
+	.offer h2{
+		font-size: 25px;
+	}
+
+	.button >.CTA-button {
+		padding: 0.1em 0.5em;
+		font-size: 1.5em;
+	}
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+}
+.arrow_box:after, .arrow_box:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #88b7d5;
+	border-width: 88px;
+	margin-top: -88px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-left-color: #c2e1f5;
+	border-width: 94px;
+	margin-top: -94px;
+}

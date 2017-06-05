@@ -1,0 +1,3579 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://go.livepartners.com/DEV-JACK/landing-page-251115/index3.php -->
+<html class=" js canvas canvastext webgl no-touch rgba multiplebgs backgroundsize borderradius boxshadow textshadow cssanimations cssgradients cssreflections csstransforms csstransitions video audio svg svgclippaths csscalc cssfilters"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NetBet Welcome Bonus Offer</title>
+<meta name="keywords" content="NetBet Welcome Bonus Offer">
+<meta name="description" content="NetBet Welcome Bonus Offer">
+<meta name="robots" content="index,nofollow"> 
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="./NetBet Welcome Bonus Offer_files/layout.css" rel="stylesheet">
+<link href="./NetBet Welcome Bonus Offer_files/master.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<script type="text/javascript" id="www-widgetapi-script" src="./NetBet Welcome Bonus Offer_files/www-widgetapi.js" async=""></script><script src="./NetBet Welcome Bonus Offer_files/iframe_api"></script><script type="text/javascript" src="./NetBet Welcome Bonus Offer_files/jquery.min.js"></script>
+<script type="text/javascript" src="./NetBet Welcome Bonus Offer_files/stately_1.13.js"></script>
+<script type="text/javascript" src="./NetBet Welcome Bonus Offer_files/bflp_1.14e.js"></script><style type="text/css">body .loaded, body .loaded-y {visibility:hidden; } body.loaded .loaded, body.loaded-y .loaded-y{visibility:visible;} #destination {visibility: visible;}</style><style type="text/css">body.select-0 .select-1, body.select-0 .select-2, body.select-0 .select-3, body.select-0 .select-4, body.select-0 .select-5 {color: black !important;}</style>
+<script src="./NetBet Welcome Bonus Offer_files/design.js"></script>
+<script src="./NetBet Welcome Bonus Offer_files/opentag.js" async="" defer=""></script>
+
+<!-- GLOBAL_IN_HEAD START -->
+<script>
+var GTM = {
+    desktop: {
+        it: '',
+        es: '',
+        com: ''
+    },
+    mobile: {
+        it: '',
+        es: '',
+        com: ''
+    }
+};
+var promoCode, params = window.LP ? LP.get('params') : {},
+    p = {};
+
+(function(name) {
+    var server = null,
+        offset = null;
+
+    Object.defineProperty(window, name, {
+        'get': function() {
+            return new Date((new Date()).valueOf() - offset);
+        },
+        'set': function(e) {
+            clock = e;
+            offset = (new Date()) - clock;
+        }
+    });
+})('SERVERCLOCK');
+
+if (window.LP && window.STATELY && window.jQuery) {
+    if (LP.get('params').ga2 === 'true' || LP.get('params').gtm === 'true') {
+        window.ga = function() {
+            console.log('old GA', arguments);
+        };
+    }
+
+// If this page isn't expecting to get a real optin status let's not worry it unduly
+LP.on('gotOptinStatus', function() {
+var wmid=LP.get('wmid');
+if (wmid===null || wmid==9602 || wmid==0)  {
+STATELY.set('optin','n');
+}
+});
+    // Piggyback start to ensure we always have a wmid
+    (function() {
+        var start = LP.start;
+        LP.start = function(cb) {
+            var wmid = LP.get('wmid');
+            if (wmid === null || wmid === 0) LP.set('wmid', 9602);
+            start(cb);
+        };
+    })();
+
+    for (var i in params) p[i.toLowerCase()] = params[i];
+
+    if (LP.on) LP.on('gotOptinStatus', function(data) {
+        $(function() {
+        	window.page=window.page||{};
+        	page.promoCode=page.promoCode || '##PROMOCODE##'.replace(/^#.*#$/,'') || $('[data-promocode]:eq(0)').data('promocode');
+		    promoCode = p.promotioncode || p.promo_code || page.promoCode /*|| LP.cookie('promotioncode') || LP.cookie('promo_code') || LP.cookie('promotionCode') */ ;
+
+            var states = STATELY.get(),
+                accountID = '123456',session=false,
+                jurisdiction = '',
+                locale = '';
+
+            if (promoCode) {
+                $(function() {
+
+                    $('a[data-promocode]').data('promocode', promoCode);
+
+                    $('a[href*="promotionCode="]').each(function(i, e) {
+                        var h = $(e).attr('href').replace(/promotionCode=[^&]*/, 'promotionCode=' + promoCode);
+                        $(e).attr('href', h);
+                        console.log(h);
+                    });
+
+                });
+            }
+            if (data.account) {
+                accountID = data.account.accountID || accountID;
+session=true;
+                locale = data.account.localeCode.split('_')[0];
+                jurisdiction = data.account.jurisdictionalCode;
+            }
+            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+            var dom = window.location.hostname.split('.').slice(-1).join('');
+            if (['com', 'es', 'it'].indexOf(dom) < 0) dom = 'com';
+
+            var d = {
+                event: 'ga_pageLoad',
+                ga_target_property: GTM[(device_is_mobile ? 'mobile' : 'desktop')][dom],
+                acc_id: accountID,
+                vertical: 'promotions',
+                product: 'promotions',
+                locale: locale,
+                reg_status: session ? 'registered' : 'unregistered',
+                login_status: session ? 'logged in' : 'logged out',
+                jurisdiction: jurisdiction,
+                orientation: device_is_mobile ? (h > w ? 'portrait' : 'landscape') : 'desktop',
+                app_ID: '',
+                promotion_name: window.location.pathname.substring(1),
+                rfr: p.rfr || LP.cookie('rfr') || 'undefined',
+                sid: p.sid || LP.cookie('sid') || 'undefined',
+                efid: p.efid || LP.cookie('efid') || 'undefined',
+                mpch: p.mpch || LP.cookie('mpch') || 'undefined',
+                pla: p.pla || LP.cookie('pla') || 'undefined',
+                clkid: p.clkid || LP.cookie('clkid') || LP.cookie('clkID') || 'undefined',
+                bid: p.bid || LP.cookie('bid') || 'undefined',
+                pid: p.pid || LP.cookie('pid') || 'undefined',
+                ttp: p.ttp || LP.cookie('ttp') || 'undefined'
+            };
+            if (promoCode) d.promo_code = promoCode;
+            if (window.dataLayer) {
+                if (window.console && console.log) console.log('GA', d);
+                dataLayer.push(d);
+            }
+        });
+    });
+
+
+}
+</script>
+<!-- GLOBAL_IN_HEAD END -->
+
+<link rel="shortcut icon" href="http://go.livepartners.com/DEV-JACK/landing-page-251115/favicon.ico" type="image/x-icon">
+
+
+<script type="text/javascript"> var device_is_mobile = false; </script>
+<script type="text/javascript" src="./NetBet Welcome Bonus Offer_files/general.js"></script>
+	
+<style type="text/css">
+<!-- 
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-webfont.eot');
+    src: url('./fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/BebasNeue-webfont.woff') format('woff'),
+         url('./fonts/BebasNeue-webfont.ttf') format('truetype'));
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.bottom-blocks .row .wrapper .text
+{
+    margin: 0;
+
+    text-transform: uppercase;
+}
+
+.price-wrapper .main-cta-wrapper .main-cta .button-wrapper a.register-cta {
+    background: -webkit-linear-gradient(#baff00, #64b300);
+	border-radius: 4px;
+    border: none;
+}
+.main-cta-wrapper, .logo-game-wrapper,
+.str-button {
+cursor:pointer;
+}
+.image_align{
+display:none;
+}
+.logo-game-wrapper .image img.stick-to-top {
+margin-top:0;
+}
+
+.boom-lines-under-image .step-wrapper .step-element .boom-lines-elements-top {
+    opacity: 1;
+}
+.boom-lines .price-wrapper .main-cta-wrapper .main-cta h1,
+.boom-lines .price-wrapper .main-cta-wrapper .main-cta h2,
+.boom-lines .price-wrapper .main-cta-wrapper .main-cta h3,
+ .boom-lines .price-wrapper .main-cta-wrapper .main-cta span {
+    color: #ffffff !important;
+}
+.boom-lines .main-slider {
+    background: url(./img/bg.jpg) #baff00;
+	background-position: top center;
+	background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ff9600', endColorstr='#ffc400');
+}
+.counter-data {
+display:none;
+}
+.button {
+    padding: 0.4em 0.8em 0.4em 0.8em;
+}
+.price-wrapper .main-cta-wrapper .main-cta h1,
+.price-wrapper .main-cta-wrapper .main-cta h2,
+.price-wrapper .main-cta-wrapper .main-cta h3
+{
+    line-height: 100%;
+
+    margin: 0;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.main-header .login-wrapper .wrap > div .login
+{
+    line-height: 1.8em;
+}
+.step-wrapper .step-holder-wrapper .step-holder .step .number
+{
+    line-height: .8em;
+}
+
+@-webkit-keyframes pulse_animation
+{
+    0%
+    {
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+    }
+    50%
+    {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+    100%
+    {
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+    }
+}
+.offer-wrapper .str-button
+{
+    -webkit-animation-name: pulse_animation;
+            animation-name: pulse_animation;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+
+.main-header .logo-wrapper .logo.casino-carbon
+{
+    background-image: url(./img/logo.png);
+}
+.main-footer .logo-mobile
+{
+    padding-top: 20px;
+}
+.price-wrapper .main-cta-wrapper .main-cta .text-1
+{
+    margin-bottom: 17px !important;
+    margin-left: 0;
+
+    letter-spacing: 6.4px;
+}
+.price-wrapper .main-cta-wrapper .main-cta .text-1,
+.price-wrapper .main-cta-wrapper .main-cta .text-3,
+.price-wrapper .main-cta-wrapper .main-cta .text-4,
+.price-wrapper .main-cta-wrapper .main-cta .text-5
+{
+    font-size: inherit;
+
+    margin: 0;
+
+    letter-spacing: inherit;
+
+line-height:1em;
+}
+.price-wrapper .main-cta-wrapper .main-cta .text-2
+{
+    margin: 0;
+
+    letter-spacing: inherit;
+
+line-height:1em ;
+}
+/*.main-cta .button-wrapper,*/
+.ad-box,
+.body-wrapper .content-holder .price-wrapper .main-cta-wrapper .main-cta.underlayer
+{
+    opacity: 0;
+}
+.body-wrapper .content-holder .price-wrapper .main-cta-wrapper .main-cta.underlayer
+{
+    box-sizing: border-box;
+    max-width: 350px;
+    padding: 20px !important;
+}
+.wf-active .price-wrapper .main-cta-wrapper .main-cta .text-1,
+.wf-active .price-wrapper .main-cta-wrapper .main-cta .text-2,
+.wf-active .price-wrapper .main-cta-wrapper .main-cta .text-3,
+.wf-active .price-wrapper .main-cta-wrapper .main-cta .text-4,
+.wf-active .price-wrapper .main-cta-wrapper .main-cta .text-5,
+.wf-active .body-wrapper .content-holder .price-wrapper .main-cta-wrapper .main-cta.underlayer,
+.wf-active .main-cta .button-wrapper,
+.wf-active .ad-box
+{
+    opacity: 1;
+}
+/*-----------Soft Styles----------------------*/
+body.app-ios
+{
+    padding-top: 0 !important;
+}
+body.soft-y .soft-n,
+body.soft-n .soft-y
+{
+    display: none;
+}
+body.soft-y,
+body.soft-y #body-wrapper
+{
+    background: none !important;
+}
+body.soft-y .content-holder {
+opacity:0;
+}
+body.soft-y .main-slider {
+background:none;
+}
+
+body.soft-n.loaded-y .soft-n.loaded-y
+{
+    display: block;
+}
+#destination
+{
+    position: absolute;
+    z-index: -10;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+}
+#fullscreen
+{
+    position: absolute;
+    z-index: -9;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .4;
+
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */
+}
+body.soft-y .navbar,
+body.soft-y footer,
+body.soft-y .lp-tertiary
+{
+    display: none;
+}
+body.soft-y .container
+{
+    margin-right: 270px;
+
+    background: gray;
+}
+#finalstep
+{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+
+    position: absolute;
+    top: 138px;
+    right: 264px;
+
+    width: 200px;
+    padding: 10px;
+
+    color: #000;
+    border: thin solid black;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 14px 0 rgba(50, 50, 50, .58);
+       -moz-box-shadow: 5px 5px 14px 0 rgba(50, 50, 50, .58);
+            box-shadow: 5px 5px 14px 0 rgba(50, 50, 50, .58);
+}
+.finalstepbutton
+{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 34px;
+
+    display: block;
+
+    width: 100px;
+    height: 34px;
+    margin: auto;
+
+    text-align: center;
+    text-decoration: none;
+    text-indent: -1px;
+
+    color: #666;
+    border: 1px solid #dcdcdc;
+    -webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+            border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+            border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+            border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+            border-bottom-left-radius: 8px;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(.05, #f9f9f9), color-stop(1, #e9e9e9));
+    background: -moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff;
+       -moz-box-shadow: inset 0 1px 0 0 #fff;
+            box-shadow: inset 0 1px 0 0 #fff;
+    text-shadow: 1px 1px 0 #fff;
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+}
+.finalstepbutton:hover
+{
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(.05, #e9e9e9), color-stop(1, #f9f9f9));
+    background: -moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+}
+.finalstepbutton:active
+{
+    position: relative;
+    top: 1px;
+}
+@media (min-width:1200px)
+{
+    .bottom-blocks .row
+    {
+        max-width: 2520px;
+    }
+}
+.yellow
+{
+    color: #baff00;
+}
+.ad-box
+{
+    width: 100%;
+    min-width: 286px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 8px;
+
+    text-transform: uppercase;
+
+    border: 1px solid #fff;
+}
+@media only screen and (max-width: 960px)
+{
+    .fallback .price-wrapper .main-cta-wrapper .main-cta h1,
+    .fallback .price-wrapper .main-cta-wrapper .main-cta h2,
+    .fallback .price-wrapper .main-cta-wrapper .main-cta h3,
+    .ad-box .yellow
+    {
+        color: #1e1e1e !important;
+    }
+    .body-wrapper .content-holder .price-wrapper .main-cta-wrapper .main-cta.underlayer
+    {
+        padding: 0 !important;
+    }
+    .ad-box
+    {
+        font-size: 14px;
+
+        color: #1e1e1e;
+        border: 1px solid #1e1e1e;
+    }
+}
+
+.popup .text h2,
+.popup .text h3,
+.popup .text h4
+{
+    font-family: 'Bebas Neue', sans-serif;
+
+    text-transform: uppercase;
+}
+.popup-wrapper
+{
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: -50%;
+
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+
+    transition: all .3s ease-in;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+.popup-wrapper .close
+{
+    position: fixed;
+    z-index: 3;
+    z-index: 1000;
+    top: 15px;
+    right: 15px;
+
+    width: 2em;
+    height: 2em;
+
+    -webkit-transition: -webkit-transform .3s 0s ease;
+            transition:         transform .6s 0s ease;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+
+    background: url(https://promotions.cdnbf.net/media/english_uk/files/ci_various/font1/plugins/close.svg) no-repeat center;
+    background-color: #000;
+    background-size: 20px;
+}
+.popup-wrapper.active .close
+{
+    -webkit-transition: -webkit-transform .3s .6s ease;
+            transition:         transform .3s .6s ease;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+
+
+.popup .text h2
+{
+    font-size: 1.4375em;
+
+    padding: 1.30435em 0 .17391em 0;
+
+    text-align: center;
+}
+.popup .text h3
+{
+    font-size: 1.6875em;
+    line-height: 1.11111em;
+
+    text-align: center;
+}
+
+
+.popup-wrapper .button
+{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.625em;
+
+    position: fixed;
+    z-index: 12;
+    z-index: 200;
+    bottom: 110px;
+    bottom: -50%;
+    left: 50%;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 680px;
+    padding: .46552em .41379em .53448em;
+
+    -webkit-transition: -webkit-transform .3s 0s ease;
+            transition:         transform .3s 0s ease;
+    -webkit-transform: translate(-50%, 100%);
+        -ms-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
+    text-decoration: none;
+
+    color: #1e1e1e;
+    background: #baff00;
+}
+.popup-wrapper.active .button
+{
+    bottom: 0;
+
+    -webkit-transition: -webkit-transform 1s .6s ease;
+            transition:         transform .3s .6s ease;
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+}
+.offer-std.active.banner .title
+{
+    font-size: 50px;
+
+    margin: 15px 0;
+}
+.popup
+{
+    position: fixed;
+    z-index: 11;
+    z-index: 100;
+    top: 0;
+
+    overflow: auto;
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 140px;
+
+    color: #000;
+    background: #fff;
+}
+.popup-wrapper.active
+{
+    left: 50%;
+display:block;
+background:#fff;
+}
+@media (min-width:768px)
+{
+    .popup-wrapper
+    {
+        top: 100px;
+
+        height: 80%;
+    }
+    .offer-std.active.banner .title
+    {
+        font-size: 80px;
+    }
+    .banner .wrapper
+    {
+        min-height: 164px;
+    }
+
+    .popup-wrapper .button
+    {
+        bottom: 0 !important;
+    }
+}
+.overlay
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+    background: rgba(0,0,0,.8);
+}
+.popup-wrapper p,
+.popup-wrapper h4
+{
+    margin-bottom: 10px;
+}
+.popup .text h3
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.logo-games img
+{
+    opacity: 0;
+}
+.logo-games img.image-opacity
+{
+    opacity: 1;
+}
+@media (max-width:767px)
+{
+    .button.cta-link
+    {
+        font-size: 1.5em;
+
+        text-align: center;
+    }
+}
+.small-width.text-2
+{
+    font-size: 11em !important;
+
+    width: 80%;
+    margin: 0 auto !important;
+}
+
+.price-wrapper .main-cta-wrapper .main-cta .button-wrapper
+{
+    padding-top: 0;
+}
+.terms
+{
+    text-decoration: underline;
+}
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-1
+{
+    font-size: inherit;
+}
+/*-------------Stately CSS--------------*/
+
+body.session-n .session-y,
+body.session-n .session-error,
+body.session-y .session-n,
+body.session-y .session-error,
+body.session-error .session-n,
+body.session-error .session-y
+{
+    display: none;
+}
+body.session-n .session-not-n,
+body.session-y .session-not-y,
+body.session-error .session-not-error
+{
+    display: none;
+}
+body.optin-n .optin-y,
+body.optin-n .optin-x,
+body.optin-n .optin-submit,
+body.optin-n .optin-inactive,
+body.optin-n .optin-error,
+body.optin-y .optin-n,
+body.optin-y .optin-x,
+body.optin-y .optin-submit,
+body.optin-y .optin-inactive,
+body.optin-y .optin-error,
+body.optin-x .optin-n,
+body.optin-x .optin-y,
+body.optin-x .optin-submit,
+body.optin-x .optin-inactive,
+body.optin-x .optin-error,
+body.optin-submit .optin-n,
+body.optin-submit .optin-y,
+body.optin-submit .optin-x,
+body.optin-submit .optin-inactive,
+body.optin-submit .optin-error,
+body.optin-inactive .optin-n,
+body.optin-inactive .optin-y,
+body.optin-inactive .optin-x,
+body.optin-inactive .optin-submit,
+body.optin-inactive .optin-error,
+body.optin-error .optin-n,
+body.optin-error .optin-y,
+body.optin-error .optin-x,
+body.optin-error .optin-submit,
+body.optin-error .optin-inactive
+{
+    display: none;
+}
+body.optin-n .optin-not-n,
+body.optin-y .optin-not-y,
+body.optin-x .optin-not-x,
+body.optin-submit .optin-not-submit,
+body.optin-inactive .optin-not-inactive,
+body.optin-error .optin-not-error
+{
+    display: none;
+}
+body.soft-n .soft-y,
+body.soft-y .soft-n
+{
+    display: none;
+}
+body.soft-n .soft-not-n,
+body.soft-y .soft-not-y
+{
+    display: none;
+}
+body.prospect-y .prospect-n,
+body.prospect-n .prospect-y
+{
+    display: none;
+}
+body.prospect-y .prospect-not-y,
+body.prospect-n .prospect-not-n
+{
+    display: none;
+}
+body.mobile-n .mobile-y.loaded-y,
+body.mobile-y .mobile-n.loaded-y
+{
+    display: none;
+}
+body.mobile-n .mobile-not-n,
+body.mobile-y .mobile-not-y
+{
+    display: none;
+}
+body.resubmit-n .resubmit-y,
+body.resubmit-y .resubmit-n
+{
+    display: none;
+}
+body.resubmit-n .resubmit-not-n,
+body.resubmit-y .resubmit-not-y
+{
+    display: none;
+}
+body.allowed-y .allowed-n,
+body.allowed-n .allowed-y
+{
+    display: none;
+}
+body.allowed-y .allowed-not-y,
+body.allowed-n .allowed-not-n
+{
+    display: none;
+}
+body.select-0 .select-1,
+body.select-0 .select-2,
+body.select-0 .select-3,
+body.select-0 .select-4,
+body.select-0 .select-5,
+body.select-1 .select-0,
+body.select-1 .select-2,
+body.select-1 .select-3,
+body.select-1 .select-4,
+body.select-1 .select-5,
+body.select-2 .select-0,
+body.select-2 .select-1,
+body.select-2 .select-3,
+body.select-2 .select-4,
+body.select-2 .select-5,
+body.select-3 .select-0,
+body.select-3 .select-1,
+body.select-3 .select-2,
+body.select-3 .select-4,
+body.select-3 .select-5,
+body.select-4 .select-0,
+body.select-4 .select-1,
+body.select-4 .select-2,
+body.select-4 .select-3,
+body.select-4 .select-5,
+body.select-5 .select-0,
+body.select-5 .select-1,
+body.select-5 .select-2,
+body.select-5 .select-3,
+body.select-5 .select-4
+{
+    color: gray;
+}
+body.select-0 .select-not-0,
+body.select-1 .select-not-1,
+body.select-2 .select-not-2,
+body.select-3 .select-not-3,
+body.select-4 .select-not-4,
+body.select-5 .select-not-5
+{
+    color: gray;
+}
+body.expired-n .expired-y,
+body.expired-y .expired-n
+{
+    display: none;
+}
+body.expired-n .expired-not-n,
+body.expired-y .expired-not-y
+{
+    display: none;
+}
+body.loaded-n .loaded-y,
+body.loaded-y .loaded-n
+{
+    display: none;
+}
+body.loaded-n .loaded-not-n,
+body.loaded-y .loaded-not-y
+{
+    display: none;
+}
+body.app-na .app-ios,
+body.app-na .app-android,
+body.app-ios .app-na,
+body.app-ios .app-android,
+body.app-android .app-na,
+body.app-android .app-ios
+{
+    display: none;
+}
+body.app-na .app-not-na,
+body.app-ios .app-not-ios,
+body.app-android .app-not-android
+{
+    display: none;
+}
+body.payments-y .payments-n,
+body.payments-n .payments-y
+{
+    display: none;
+}
+body.payments-y .payments-not-y,
+body.payments-n .payments-not-n
+{
+    display: none;
+}
+body.currency-GBP .currency-EUR,
+body.currency-EUR .currency-GBP
+{
+    display: none;
+}
+body.currency-GBP .currency-not-GBP,
+body.currency-EUR .currency-not-EUR
+{
+    display: none;
+}
+
+
+/* --------------------End of Stately CSS ---------------*/
+
+h4,
+h1,
+h2,
+h3,
+h5,
+p
+{
+    margin: 0;
+}
+.price-wrapper .main-cta-wrapper .main-cta .additional .title:after {
+display:none;
+}
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-3 {
+font-size:4em;
+}
+@media (max-width:1024px) and (min-width:960px)
+{
+    .main-cta .terms
+    {
+        color: #1e1e1e;
+    }
+    .step-wrapper .offer-wrapper .offer-text
+    {
+        color: #1e1e1e;
+    }
+    .boom-lines .price-wrapper .main-cta-wrapper .main-cta .additional .title
+    {
+        color: #baff00;
+        border-color: transparent;
+    }
+    
+   .price-wrapper .main-cta-wrapper .main-cta .additional
+    {
+        background: #1e1e1e;
+    }
+    .arrows-carbon .step-wrapper .offer-wrapper .str-button span
+    {
+        border-color: transparent transparent #ffffff #ffffff;
+    }
+    .price-wrapper .main-cta-wrapper .main-cta .additional .title,
+    .price-wrapper .main-cta-wrapper .main-cta .additional.open-text .title
+    {
+        color: #baff00;
+        border-color: transparent;
+    }
+    .main-cta .button
+    {
+        border: 1px solid #1e1e1e;
+        background: transparent;
+    }
+    .arrows-carbon .step-wrapper .offer-wrapper .str-button span
+    {
+        border-color: transparent transparent #baff00 #baff00;
+    }
+    .price-wrapper .main-cta-wrapper .main-cta .additional .title:after,
+    .price-wrapper .main-cta-wrapper .main-cta .additional .title:before
+    {
+        border-color: transparent #fafafa #fafafa transparent;
+    }
+.price-wrapper .main-cta-wrapper .main-cta .additional .more {
+border:none;
+}
+}
+@media (max-width:1024px)
+{
+    .main-slider
+    {
+        background: -webkit-linear-gradient(225deg, #ff9600 0%, #ffc400 70%, #ffc400 100%);
+        background:         linear-gradient(-135deg, #ff9600 0%, #ffc400 70%, #ffc400 100%);
+
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ff9600', endColorstr='#ffc400');
+    }
+    .main-slider .slide span,
+    .main-slider .slide img
+    {
+        display: none;
+    }
+    .cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-1,
+    .cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-2,
+    .cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-3,
+    .cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-4,
+    .cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-5
+    {
+        color: #000;
+        border-color: #000;
+    }
+}
+@media (max-width:959px){
+.logo-game-wrapper .logo-games img {
+    max-width: 24em;
+}
+
+.price-wrapper .main-cta-wrapper .main-cta .additional .title,
+    .price-wrapper .main-cta-wrapper .main-cta .additional.open-text .title
+    {
+        color: #baff00;
+        border-color: transparent;
+    }
+ .price-wrapper .main-cta-wrapper .main-cta .additional
+    {
+        background: #1e1e1e;
+    }
+.price-wrapper .main-cta-wrapper .main-cta .additional .more {
+border:none;
+}
+}
+@media (max-width:480px){
+.columns.small-12.medium-6.medium-pull-3.header-text {
+    height: 5em;
+    display: none;
+}
+.main-header .header-text .wrap span {
+font-size:2em;
+}
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta {
+    margin-top: 40px;
+}
+.logo-partner .logo-game-wrapper .logo-games {
+    top: 40px;
+position:relative;
+}
+
+.logo-game-wrapper .logo-games img {
+    max-width: 16em;
+}
+
+}
+.popup-wrapper .text {
+padding-bottom:100px;
+}
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .popup-wrapper.active .wrapper {
+	    position: static;
+	    width: 100%;
+	    height: 100%;
+	}
+	.popup-wrapper.active .button,
+	 .popup-wrapper.active .close,
+	 .popup-wrapper .popup {
+	position:absolute;
+	} 
+}
+.popup .text {
+    padding-bottom: 100px;
+}
+.boom-lines .logo-game-wrapper .image {
+position:absolute;
+left: 5em;
+}
+.price-wrapper {
+overflow:visible;
+position: relative;
+}
+
+.triangle-left {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 784px;
+	height: 27px;
+	background: url('./img/triangle-left.png')
+}
+
+.triangle-right {
+	position: absolute;
+	bottom:0;
+	right:0;
+	width: 784px;
+	height: 27px;
+	background: url('./img/triangle-right.png')
+}
+
+.triangle-left-below {
+	position: absolute;
+	bottom:-27px;
+	left:0;
+	width: 784px;
+	height: 27px;
+	background: url('./img/triangle-left.png')
+}
+
+.triangle-right-above {
+	position: absolute;
+	top:-27px;
+	right:0;
+	width: 784px;
+	height: 27px;
+	background: url('./img/triangle-right.png')
+}
+
+@media only screen and (max-width: 480px) {
+	
+	.triangle-left, .triangle-right, .triangle-right-above, .triangle-left-below, .odds-footer-split-left, .step-wrapper .step-cta-top {
+		display: none;
+	}
+	
+	.odds-footer-split-right {
+		margin-right: 0;
+	}
+}
+
+.odds-wrapper {
+	background: #666666;
+	position: relative;
+}
+
+.odds-title, .odds-footer {
+	height: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.odds-title {
+	height: 10em;
+}
+
+.odds-title-text, .odds-footer-text {
+	line-height: 2em;
+	font-size: 5em;
+	font-family: 'Bebas Neue';
+	color: #ffffff;
+}
+
+.odds-footer-text {
+	color: #333333;
+    padding-left: 10px;
+}
+
+.logo-game-wrapper .logo-games {
+   
+    margin: 0;
+}
+.boom-lines .logo-game-wrapper .image {
+left:0;
+}
+
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-2 {
+    font-size: 6.4em;
+    line-height: 0.4em;
+    overflow: initial;
+    text-shadow: #000000 0 0 10px;
+}
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-3 {
+    font-size: 13.8em;
+	color: #baff00 !important;
+	text-shadow:  #000000 0 0 10px;
+}
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-4 {
+    font-size: 5.7em;
+    line-height: 0.4em;
+    overflow: initial;
+    text-shadow: #000000 0 0 10px;
+}
+@-webkit-keyframes sunday {
+        0% {
+		  background: -webkit-linear-gradient(#baff00, #64b300)
+        }
+        25% {
+		  background: -webkit-linear-gradient(#64b300, #baf000, #baff00, #64b300)
+        }
+		50% {
+		  background: -webkit-linear-gradient(#64b300, #baff00)
+        }
+		75% {
+		  background: -webkit-linear-gradient(#baff00, #64b300, #64b300, #baff00)
+        }
+		100% {
+		  background: -webkit-linear-gradient(#baff00, #64b300)
+        }
+      }
+@-moz-keyframes sunday {
+        0% {
+		  background: -webkit-linear-gradient(#baff00, #64b300)
+        }
+        25% {
+		  background: -webkit-linear-gradient(#64b300, #baf000, #baff00, #64b300)
+        }
+		50% {
+		  background: -webkit-linear-gradient(#64b300, #baff00)
+        }
+		75% {
+		  background: -webkit-linear-gradient(#baff00, #64b300, #64b300, #baff00)
+        }
+		100% {
+		  background: -webkit-linear-gradient(#baff00, #64b300)
+        }
+      }
+@-keyframes sunday {
+        0% {
+		  background: -webkit-linear-gradient(#baff00, #64b300)
+        }
+        25% {
+		  background: -webkit-linear-gradient(#64b300, #baf000, #baff00, #64b300)
+        }
+		50% {
+		  background: -webkit-linear-gradient(#64b300, #baff00)
+        }
+		75% {
+		  background: -webkit-linear-gradient(#baff00, #64b300, #64b300, #baff00)
+        }
+		100% {
+		  background: -webkit-linear-gradient(#baff00, #64b300)
+        }
+      }
+	  // -->
+</style>
+	<script>
+    	var messages = [],
+        index = 0;
+    		messages.push(['Nice','Paris St-Germain','6.60','4.15','1.51','04/12/2015 20:30:00','Ligue 1','22615','France']);    		
+    		messages.push(['Schalke','Hannover','1.59','4.05','5.55','04/12/2015 20:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Lazio','Juventus','3.40','3.20','2.25','04/12/2015 20:45:00','Serie A','22784','Italy']);    		
+    		messages.push(['Stoke City','Man City','5.05','3.80','1.71','05/12/2015 13:45:00','Premier League','22594','England']);    		
+    		messages.push(['Torino','AS Roma','2.80','2.95','2.70','05/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Cologne','Augsburg','2.20','3.25','3.35','05/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Ingolstadt','Hoffenheim','2.35','3.15','3.20','05/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Monchengladbach','Bayern Munchen','8.00','5.05','1.36','05/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Hamburg','Mainz','2.35','3.30','3.05','05/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Hertha Berlin','Leverkusen','3.70','3.35','2.05','05/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Arsenal','Sunderland','1.29','5.60','11.50','05/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Man United','West Ham','1.43','4.45','8.50','05/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Southampton','Aston Villa','1.51','4.10','7.00','05/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Swansea','Leicester','2.65','3.40','2.70','05/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['West Brom','Tottenham','4.50','3.50','1.87','05/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Real Madrid','Getafe','1.12','9.25','19.00','05/12/2015 16:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Watford','Norwich','2.20','3.35','3.45','05/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Lyon','Angers','1.59','3.70','6.65','05/12/2015 17:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Granada CF','Atletico Madrid','7.00','3.65','1.56','05/12/2015 18:15:00','La Liga','22595','Spain']);    		
+    		messages.push(['Wolfsburg','Dortmund','4.00','4.00','1.80','05/12/2015 18:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Chelsea','Bournemouth','1.39','4.75','8.75','05/12/2015 18:30:00','Premier League','22594','England']);    		
+    		messages.push(['Caen','Lille','2.40','3.00','3.25','05/12/2015 20:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Bastia','Monaco','3.50','3.20','2.20','05/12/2015 20:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Reims','Troyes','1.74','3.65','4.95','05/12/2015 20:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Ajaccio GFCO','Nantes','2.60','2.95','3.05','05/12/2015 20:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Toulouse','Lorient','2.15','3.30','3.50','05/12/2015 20:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Valencia','Barcelona','9.25','5.30','1.32','05/12/2015 20:30:00','La Liga','22595','Spain']);    		
+    		messages.push(['Inter Milan','Genoa','1.63','3.90','5.65','05/12/2015 20:45:00','Serie A','22784','Italy']);    		
+    		messages.push(['Dep La Coruna','Sevilla','2.95','3.40','2.35','05/12/2015 22:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Betis','Celta Vigo','3.35','3.45','2.15','05/12/2015 22:05:00','La Liga','22595','Spain']);    		
+    		messages.push(['Sociedad','Eibar','1.87','3.45','4.50','06/12/2015 12:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Bologna','Napoli','6.90','4.30','1.47','06/12/2015 12:30:00','Serie A','22784','Italy']);    		
+    		messages.push(['Marseille','Montpellier','1.67','3.70','5.45','06/12/2015 14:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Atalanta','Palermo','1.80','3.45','4.80','06/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Verona','Empoli','2.85','3.15','2.55','06/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Fiorentina','Udinese','1.47','4.30','7.25','06/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Frosinone','Chievo','3.10','3.10','2.40','06/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Stuttgart','Werder Bremen','1.95','3.65','3.70','06/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Villarreal','Vallecano','1.57','3.95','6.10','06/12/2015 16:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Bordeaux','Guingamp','2.00','3.25','4.05','06/12/2015 17:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Newcastle','Liverpool','5.45','4.10','1.63','06/12/2015 17:00:00','Premier League','22594','England']);    		
+    		messages.push(['Eintracht Frankfurt','SV Darmstadt 98','1.95','3.35','4.20','06/12/2015 17:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Sampdoria','Sassuolo','2.40','3.15','3.10','06/12/2015 18:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Sporting Gijon','Las Palmas','2.30','3.20','3.20','06/12/2015 18:15:00','La Liga','22595','Spain']);    		
+    		messages.push(['Athletic Bilbao','Malaga','1.48','4.25','7.00','06/12/2015 20:30:00','La Liga','22595','Spain']);    		
+    		messages.push(['Carpi FC','AC Milan','5.10','3.40','1.77','06/12/2015 20:45:00','Serie A','22784','Italy']);    		
+    		messages.push(['St. Etienne','Stade Rennes','2.05','3.05','4.05','06/12/2015 21:00:00','Ligue 1','22615','France']);    		
+    		messages.push(['Espanyol','Levante','2.00','3.25','4.10','07/12/2015 20:30:00','La Liga','22595','Spain']);    		
+    		messages.push(['Everton','Crystal Palace','2.05','3.50','3.75','07/12/2015 21:00:00','Premier League','22594','England']);    		
+    		messages.push(['PSV Eindhoven','CSKA Moscow','1.91','3.55','4.00','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Sevilla','Juventus','2.50','3.20','2.90','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Wolfsburg','Man United','2.45','3.35','2.90','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Man City','Monchengladbach','1.50','4.50','6.20','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Benfica','Atletico Madrid','3.05','3.15','2.45','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Real Madrid','Malmo','1.07','12.25','26.75','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Paris St-Germain','Shakhtar Donetsk','1.36','5.05','8.00','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Galatasaray','FC Astana','1.44','4.45','7.25','08/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Dynamo Kiev','Maccabi Tel Aviv','1.14','7.75','19.75','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Chelsea','Porto','1.95','3.40','4.00','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Olympiakos','Arsenal','3.40','3.60','2.10','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Valencia','Lyon','1.39','4.75','8.00','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['AS Roma','BATE Borisov','1.22','6.50','12.75','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Gent','Zenit St. Petersburg','2.30','3.45','3.00','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Dinamo Zagreb','Bayern Munchen','11.75','6.25','1.24','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Leverkusen','Barcelona','3.40','3.75','2.00','09/12/2015 20:45:00','Champions League','22953','Champions League']);    		
+    		messages.push(['Gilan Gabala','FC Krasnodar','4.20','3.50','1.87','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Napoli','Legia Warsaw','1.50','4.35','6.10','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Slovan Liberec','Marseille','3.85','3.50','1.95','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Groningen','Braga','3.35','3.35','2.15','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Dortmund','PAOK Saloniki','1.17','7.00','14.50','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Bordeaux','Rubin Kazan','2.45','3.25','2.85','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Viktoria Plzen','Villarreal','2.90','3.40','2.35','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Sion','Liverpool','3.65','2.95','2.20','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Fenerbahce','Celtic','1.33','4.95','8.75','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Rapid Vienna','Dinamo Minsk','1.39','4.65','7.50','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Midtjylland','Club Brugge','2.50','3.25','2.80','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Ajax','Molde','1.34','5.00','8.25','10/12/2015 19:00:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Athletic Bilbao','AZ Alkmaar','1.34','4.95','8.50','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Partizan Belgrade','Augsburg','3.40','3.50','2.05','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Lech Poznan','Basel','2.50','3.25','2.80','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Dnipro','Rosenborg','1.69','3.70','4.90','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Anderlecht','Karabakh','1.36','4.50','9.00','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Tottenham','Monaco','2.25','3.30','3.15','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Sporting Lisbon','Besiktas','1.83','3.60','4.20','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Skenderbeu Korca','Lokomotiv Moscow','10.00','4.85','1.32','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Asteras Tripolis','Schalke','3.60','3.60','1.95','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['St. Etienne','Lazio','2.40','3.30','2.90','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Fiorentina','Belenenses','1.20','6.00','15.75','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Apoel Nicosia','Sparta Prague','3.50','3.30','2.10','10/12/2015 21:05:00','Europa League','22902','Europa League']);    		
+    		messages.push(['Mainz','Stuttgart','2.15','3.45','3.10','11/12/2015 20:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Getafe','Sociedad','2.40','3.10','2.95','11/12/2015 20:30:00','La Liga','22595','Spain']);    		
+    		messages.push(['Norwich','Everton','2.85','3.35','2.35','12/12/2015 13:45:00','Premier League','22594','England']);    		
+    		messages.push(['Genoa','Bologna','1.87','3.25','4.20','12/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['SV Darmstadt 98','Hertha Berlin','3.10','3.00','2.35','12/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Hoffenheim','Hannover','1.83','3.50','4.15','12/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Werder Bremen','Cologne','2.35','3.30','2.90','12/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Bayern Munchen','Ingolstadt','1.03','13.00','38.75','12/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Wolfsburg','Hamburg','1.59','3.90','5.25','12/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Crystal Palace','Southampton','2.45','3.25','2.75','12/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['West Ham','Stoke City','2.10','3.25','3.35','12/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Sunderland','Watford','2.80','3.15','2.50','12/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Man City','Swansea','1.22','6.00','10.75','12/12/2015 16:00:00','Premier League','22594','England']);    		
+    		messages.push(['Barcelona','Dep La Coruna','1.07','9.25','27.25','12/12/2015 16:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Palermo','Frosinone','1.56','3.75','6.10','12/12/2015 18:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Sassuolo','Torino','2.75','3.10','2.55','12/12/2015 18:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Celta Vigo','Espanyol','1.45','4.30','6.50','12/12/2015 18:15:00','La Liga','22595','Spain']);    		
+    		messages.push(['Levante','Granada CF','2.10','3.15','3.60','12/12/2015 18:15:00','La Liga','22595','Spain']);    		
+    		messages.push(['Leverkusen','Monchengladbach','1.77','3.70','4.10','12/12/2015 18:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Bournemouth','Man United','4.15','3.40','1.87','12/12/2015 18:30:00','Premier League','22594','England']);    		
+    		messages.push(['Sevilla','Sporting Gijon','1.33','5.05','7.75','12/12/2015 20:30:00','La Liga','22595','Spain']);    		
+    		messages.push(['Udinese','Inter Milan','3.80','3.25','2.00','12/12/2015 20:45:00','Serie A','22784','Italy']);    		
+    		messages.push(['Las Palmas','Betis','2.05','3.25','3.55','12/12/2015 22:05:00','La Liga','22595','Spain']);    		
+    		messages.push(['Vallecano','Malaga','2.25','3.25','3.05','13/12/2015 12:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Aston Villa','Arsenal','5.45','3.95','1.57','13/12/2015 14:30:00','Premier League','22594','England']);    		
+    		messages.push(['AC Milan','Verona','1.30','4.85','9.75','13/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Chievo','Atalanta','2.30','3.05','3.20','13/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Empoli','Carpi FC','1.56','3.60','6.40','13/12/2015 15:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Augsburg','Schalke','2.50','3.30','2.65','13/12/2015 15:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Eibar','Valencia','2.70','3.15','2.60','13/12/2015 16:00:00','La Liga','22595','Spain']);    		
+    		messages.push(['Liverpool','West Brom','1.34','4.65','9.00','13/12/2015 17:00:00','Premier League','22594','England']);    		
+    		messages.push(['Tottenham','Newcastle','1.29','5.25','9.00','13/12/2015 17:00:00','Premier League','22594','England']);    		
+    		messages.push(['Dortmund','Eintracht Frankfurt','1.16','7.00','13.50','13/12/2015 17:30:00','1.Bundesliga','22798','Germany']);    		
+    		messages.push(['Napoli','AS Roma','1.61','3.85','5.30','13/12/2015 18:00:00','Serie A','22784','Italy']);    		
+    		messages.push(['Atletico Madrid','Athletic Bilbao','1.61','3.60','5.70','13/12/2015 18:15:00','La Liga','22595','Spain']);    		
+    		messages.push(['Villarreal','Real Madrid','4.45','3.95','1.67','13/12/2015 20:30:00','La Liga','22595','Spain']);    		
+    		messages.push(['Juventus','Fiorentina','1.61','3.60','5.75','13/12/2015 20:45:00','Serie A','22784','Italy']);    		
+    		messages.push(['Lazio','Sampdoria','1.45','4.05','7.00','14/12/2015 20:45:00','Serie A','22784','Italy']);    		
+    		messages.push(['Leicester','Chelsea','3.00','3.35','2.25','14/12/2015 21:00:00','Premier League','22594','England']);    		
+var en =[];
+var ucl =[];
+var uel =[];
+var es =[];
+var it =[];
+var fr =[];
+var de =[];
+
+var arrayLength = messages.length;
+for (var i = 0; i < arrayLength; i++) {
+    if(messages[i][8]=='England'){
+    	en.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+    if(messages[i][8]=='Champions League'){
+    	ucl.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+    if(messages[i][8]=='Europa League'){
+    	uel.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+    if(messages[i][8]=='Spain'){
+    	es.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+    if(messages[i][8]=='Italy'){
+    	it.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+    if(messages[i][8]=='France'){
+    	fr.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+    if(messages[i][8]=='Germany'){
+    	de.push([messages[i][0],messages[i][1],messages[i][2],messages[i][3],messages[i][4],messages[i][5],messages[i][6],messages[i][7],messages[i][8]]);
+    }
+      
+}
+
+fr = $.grep(fr,function(n){ return(n) });
+for (i = 0; i < fr.length; i++) { 
+   console.log(fr[i][0] + ' ' + fr[i][1]+ ' ' + fr[i][2]+ ' ' + fr[i][3]);
+}
+
+var index_en = 0;
+
+    	function cycle_en() {
+    		
+    		
+        	$('#participant1-1-en').text(en[index_en][0]);
+        	$('#participant2-1-en').text(en[index_en][1]);
+        	$('#home-1-en').text(en[index_en][2]);
+        	$('#draw-1-en').text(en[index_en][3]);
+        	$('#away-1-en').text(en[index_en][4]);
+        	$('#date-1-en').text(en[index_en][5]);
+        	$('#league-1-en').text(en[index_en][6]);
+			$('#leagueid-1-en').text(en[index_en][7]);
+			$('#country-1-en').text(en[index_en][8]);
+        	index_en++;
+        	if (index_en === en.length) {
+            	index_en = 0;
+        	}
+			
+			$('#participant1-2-en').text(en[index_en][0]);
+        	$('#participant2-2-en').text(en[index_en][1]);
+        	$('#home-2-en').text(en[index_en][2]);
+        	$('#draw-2-en').text(en[index_en][3]);
+        	$('#away-2-en').text(en[index_en][4]);
+        	$('#date-2-en').text(en[index_en][5]);
+        	$('#league-2-en').text(en[index_en][6]);
+			$('#leagueid-2-en').text(en[index_en][7]);
+			$('#country-2-en').text(en[index_en][8]);
+        	index_en++;
+        	if (index_en === en.length) {
+            	index_en = 0;
+        	}
+			
+			$('#participant1-3-en').text(en[index_en][0]);
+        	$('#participant2-3-en').text(en[index_en][1]);
+        	$('#home-3-en').text(en[index_en][2]);
+        	$('#draw-3-en').text(en[index_en][3]);
+        	$('#away-3-en').text(en[index_en][4]);
+        	$('#date-3-en').text(en[index_en][5]);
+        	$('#league-3-en').text(en[index_en][6]);
+			$('#leagueid-3-en').text(en[index_en][7]);
+			$('#country-3-en').text(en[index_en][8]);
+        	index_en++;
+        	if (index_en === en.length) {
+            	index_en = 0;
+        	}
+			
+			$('#participant1-4-en').text(en[index_en][0]);
+        	$('#participant2-4-en').text(en[index_en][1]);
+        	$('#home-4-en').text(en[index_en][2]);
+        	$('#draw-4-en').text(en[index_en][3]);
+        	$('#away-4-en').text(en[index_en][4]);
+        	$('#date-4-en').text(en[index_en][5]);
+        	$('#league-4-en').text(en[index_en][6]);
+			$('#leagueid-4-en').text(en[index_en][7]);
+			$('#country-4-en').text(en[index_en][8]);
+        	index_en++;
+			
+        	if (index_en === en.length) {
+            	index_en = 0;
+        	}
+        	setTimeout(cycle_en, 5000);
+    	}
+    	cycle_en();
+		
+var index_ucl = 0;
+
+    	function cycle_ucl() {
+    		
+    		
+        	$('#participant1-1-ucl').text(ucl[index_ucl][0]);
+        	$('#participant2-1-ucl').text(ucl[index_ucl][1]);
+        	$('#home-1-ucl').text(ucl[index_ucl][2]);
+        	$('#draw-1-ucl').text(ucl[index_ucl][3]);
+        	$('#away-1-ucl').text(ucl[index_ucl][4]);
+        	$('#date-1-ucl').text(ucl[index_ucl][5]);
+        	$('#league-1-ucl').text(ucl[index_ucl][6]);
+			$('#leagueid-1-ucl').text(ucl[index_ucl][7]);
+			$('#country-1-ucl').text(ucl[index_ucl][8]);
+        	index_ucl++;
+        	if (index_ucl === ucl.length) {
+            	index_ucl = 0;
+        	}
+			
+			$('#participant1-2-ucl').text(ucl[index_ucl][0]);
+        	$('#participant2-2-ucl').text(ucl[index_ucl][1]);
+        	$('#home-2-ucl').text(ucl[index_ucl][2]);
+        	$('#draw-2-ucl').text(ucl[index_ucl][3]);
+        	$('#away-2-ucl').text(ucl[index_ucl][4]);
+        	$('#date-2-ucl').text(ucl[index_ucl][5]);
+        	$('#league-2-ucl').text(ucl[index_ucl][6]);
+			$('#leagueid-2-ucl').text(ucl[index_ucl][7]);
+			$('#country-2-ucl').text(ucl[index_ucl][8]);
+        	index_ucl++;
+        	if (index_ucl === ucl.length) {
+            	index_ucl = 0;
+        	}
+			
+			$('#participant1-3-ucl').text(ucl[index_ucl][0]);
+        	$('#participant2-3-ucl').text(ucl[index_ucl][1]);
+        	$('#home-3-ucl').text(ucl[index_ucl][2]);
+        	$('#draw-3-ucl').text(ucl[index_ucl][3]);
+        	$('#away-3-ucl').text(ucl[index_ucl][4]);
+        	$('#date-3-ucl').text(ucl[index_ucl][5]);
+        	$('#league-3-ucl').text(ucl[index_ucl][6]);
+			$('#leagueid-3-ucl').text(ucl[index_ucl][7]);
+			$('#country-3-ucl').text(ucl[index_ucl][8]);
+        	index_ucl++;
+        	if (index_ucl === ucl.length) {
+            	index_ucl = 0;
+        	}
+			
+			$('#participant1-4-ucl').text(ucl[index_ucl][0]);
+        	$('#participant2-4-ucl').text(ucl[index_ucl][1]);
+        	$('#home-4-ucl').text(ucl[index_ucl][2]);
+        	$('#draw-4-ucl').text(ucl[index_ucl][3]);
+        	$('#away-4-ucl').text(ucl[index_ucl][4]);
+        	$('#date-4-ucl').text(ucl[index_ucl][5]);
+        	$('#league-4-ucl').text(ucl[index_ucl][6]);
+			$('#leagueid-4-ucl').text(ucl[index_ucl][7]);
+			$('#country-4-ucl').text(ucl[index_ucl][8]);
+        	index_ucl++;
+			
+        	if (index_ucl === ucl.length) {
+            	index_ucl = 0;
+        	}
+        	setTimeout(cycle_ucl, 5000);
+    	}
+    	cycle_ucl();
+		
+var index_uel = 0;
+
+    	function cycle_uel() {
+    		
+    		
+        	$('#participant1-1-uel').text(uel[index_uel][0]);
+        	$('#participant2-1-uel').text(uel[index_uel][1]);
+        	$('#home-1-uel').text(uel[index_uel][2]);
+        	$('#draw-1-uel').text(uel[index_uel][3]);
+        	$('#away-1-uel').text(uel[index_uel][4]);
+        	$('#date-1-uel').text(uel[index_uel][5]);
+        	$('#league-1-uel').text(uel[index_uel][6]);
+			$('#leagueid-1-uel').text(uel[index_uel][7]);
+			$('#country-1-uel').text(uel[index_uel][8]);
+        	index_uel++;
+        	if (index_uel === uel.length) {
+            	index_uel = 0;
+        	}
+			
+			$('#participant1-2-uel').text(uel[index_uel][0]);
+        	$('#participant2-2-uel').text(uel[index_uel][1]);
+        	$('#home-2-uel').text(uel[index_uel][2]);
+        	$('#draw-2-uel').text(uel[index_uel][3]);
+        	$('#away-2-uel').text(uel[index_uel][4]);
+        	$('#date-2-uel').text(uel[index_uel][5]);
+        	$('#league-2-uel').text(uel[index_uel][6]);
+			$('#leagueid-2-uel').text(uel[index_uel][7]);
+			$('#country-2-uel').text(uel[index_uel][8]);
+        	index_uel++;
+        	if (index_uel === uel.length) {
+            	index_uel = 0;
+        	}
+			
+			$('#participant1-3-uel').text(uel[index_uel][0]);
+        	$('#participant2-3-uel').text(uel[index_uel][1]);
+        	$('#home-3-uel').text(uel[index_uel][2]);
+        	$('#draw-3-uel').text(uel[index_uel][3]);
+        	$('#away-3-uel').text(uel[index_uel][4]);
+        	$('#date-3-uel').text(uel[index_uel][5]);
+        	$('#league-3-uel').text(uel[index_uel][6]);
+			$('#leagueid-3-uel').text(uel[index_uel][7]);
+			$('#country-3-uel').text(uel[index_uel][8]);
+        	index_uel++;
+        	if (index_uel === uel.length) {
+            	index_uel = 0;
+        	}
+			
+			$('#participant1-4-uel').text(uel[index_uel][0]);
+        	$('#participant2-4-uel').text(uel[index_uel][1]);
+        	$('#home-4-uel').text(uel[index_uel][2]);
+        	$('#draw-4-uel').text(uel[index_uel][3]);
+        	$('#away-4-uel').text(uel[index_uel][4]);
+        	$('#date-4-uel').text(uel[index_uel][5]);
+        	$('#league-4-uel').text(uel[index_uel][6]);
+			$('#leagueid-4-uel').text(uel[index_uel][7]);
+			$('#country-4-uel').text(uel[index_uel][8]);
+        	index_uel++;
+			
+        	if (index_uel === uel.length) {
+            	index_uel = 0;
+        	}
+        	setTimeout(cycle_uel, 5000);
+    	}
+    	cycle_uel();
+		
+var index_es = 0;
+
+    	function cycle_es() {
+    		
+    		
+        	$('#participant1-1-es').text(es[index_es][0]);
+        	$('#participant2-1-es').text(es[index_es][1]);
+        	$('#home-1-es').text(es[index_es][2]);
+        	$('#draw-1-es').text(es[index_es][3]);
+        	$('#away-1-es').text(es[index_es][4]);
+        	$('#date-1-es').text(es[index_es][5]);
+        	$('#league-1-es').text(es[index_es][6]);
+			$('#leagueid-1-es').text(es[index_es][7]);
+			$('#country-1-es').text(es[index_es][8]);
+        	index_es++;
+        	if (index_es === es.length) {
+            	index_es = 0;
+        	}
+			
+			$('#participant1-2-es').text(es[index_es][0]);
+        	$('#participant2-2-es').text(es[index_es][1]);
+        	$('#home-2-es').text(es[index_es][2]);
+        	$('#draw-2-es').text(es[index_es][3]);
+        	$('#away-2-es').text(es[index_es][4]);
+        	$('#date-2-es').text(es[index_es][5]);
+        	$('#league-2-es').text(es[index_es][6]);
+			$('#leagueid-2-es').text(es[index_es][7]);
+			$('#country-2-es').text(es[index_es][8]);
+        	index_es++;
+        	if (index_es === es.length) {
+            	index_es = 0;
+        	}
+			
+			$('#participant1-3-es').text(es[index_es][0]);
+        	$('#participant2-3-es').text(es[index_es][1]);
+        	$('#home-3-es').text(es[index_es][2]);
+        	$('#draw-3-es').text(es[index_es][3]);
+        	$('#away-3-es').text(es[index_es][4]);
+        	$('#date-3-es').text(es[index_es][5]);
+        	$('#league-3-es').text(es[index_es][6]);
+			$('#leagueid-3-es').text(es[index_es][7]);
+			$('#country-3-es').text(es[index_es][8]);
+        	index_es++;
+        	if (index_es === es.length) {
+            	index_es = 0;
+        	}
+			
+			$('#participant1-4-es').text(es[index_es][0]);
+        	$('#participant2-4-es').text(es[index_es][1]);
+        	$('#home-4-es').text(es[index_es][2]);
+        	$('#draw-4-es').text(es[index_es][3]);
+        	$('#away-4-es').text(es[index_es][4]);
+        	$('#date-4-es').text(es[index_es][5]);
+        	$('#league-4-es').text(es[index_es][6]);
+			$('#leagueid-4-es').text(es[index_es][7]);
+			$('#country-4-es').text(es[index_es][8]);
+        	index_es++;
+			
+        	if (index_es === es.length) {
+            	index_es = 0;
+        	}
+        	setTimeout(cycle_es, 5000);
+    	}
+    	cycle_es();
+		
+var index_it = 0;
+
+    	function cycle_it() {
+    		
+    		
+        	$('#participant1-1-it').text(it[index_it][0]);
+        	$('#participant2-1-it').text(it[index_it][1]);
+        	$('#home-1-it').text(it[index_it][2]);
+        	$('#draw-1-it').text(it[index_it][3]);
+        	$('#away-1-it').text(it[index_it][4]);
+        	$('#date-1-it').text(it[index_it][5]);
+        	$('#league-1-it').text(it[index_it][6]);
+			$('#leagueid-1-it').text(it[index_it][7]);
+			$('#country-1-it').text(it[index_it][8]);
+        	index_it++;
+        	if (index_it === it.length) {
+            	index_it = 0;
+        	}
+			
+			$('#participant1-2-it').text(it[index_it][0]);
+        	$('#participant2-2-it').text(it[index_it][1]);
+        	$('#home-2-it').text(it[index_it][2]);
+        	$('#draw-2-it').text(it[index_it][3]);
+        	$('#away-2-it').text(it[index_it][4]);
+        	$('#date-2-it').text(it[index_it][5]);
+        	$('#league-2-it').text(it[index_it][6]);
+			$('#leagueid-2-it').text(it[index_it][7]);
+			$('#country-2-it').text(it[index_it][8]);
+        	index_it++;
+        	if (index_it === it.length) {
+            	index_it = 0;
+        	}
+			
+			$('#participant1-3-it').text(it[index_it][0]);
+        	$('#participant2-3-it').text(it[index_it][1]);
+        	$('#home-3-it').text(it[index_it][2]);
+        	$('#draw-3-it').text(it[index_it][3]);
+        	$('#away-3-it').text(it[index_it][4]);
+        	$('#date-3-it').text(it[index_it][5]);
+        	$('#league-3-it').text(it[index_it][6]);
+			$('#leagueid-3-it').text(it[index_it][7]);
+			$('#country-3-it').text(it[index_it][8]);
+        	index_it++;
+        	if (index_it === it.length) {
+            	index_it = 0;
+        	}
+			
+			$('#participant1-4-it').text(it[index_it][0]);
+        	$('#participant2-4-it').text(it[index_it][1]);
+        	$('#home-4-it').text(it[index_it][2]);
+        	$('#draw-4-it').text(it[index_it][3]);
+        	$('#away-4-it').text(it[index_it][4]);
+        	$('#date-4-it').text(it[index_it][5]);
+        	$('#league-4-it').text(it[index_it][6]);
+			$('#leagueid-4-it').text(it[index_it][7]);
+			$('#country-4-it').text(it[index_it][8]);
+        	index_it++;
+			
+        	if (index_it === it.length) {
+            	index_it = 0;
+        	}
+        	setTimeout(cycle_it, 5000);
+    	}
+    	cycle_it();
+
+var index_fr = 0;
+
+		function cycle_fr() {
+    		
+    		
+        	$('#participant1-1-fr').text(fr[index_fr][0]);
+        	$('#participant2-1-fr').text(fr[index_fr][1]);
+        	$('#home-1-fr').text(fr[index_fr][2]);
+        	$('#draw-1-fr').text(fr[index_fr][3]);
+        	$('#away-1-fr').text(fr[index_fr][4]);
+        	$('#date-1-fr').text(fr[index_fr][5]);
+        	$('#league-1-fr').text(fr[index_fr][6]);
+			$('#leagueid-1-fr').text(fr[index_fr][7]);
+			$('#country-1-fr').text(fr[index_fr][8]);
+        	index_fr++;
+        	if (index_fr === fr.length) {
+            	index_fr = 0;
+        	}
+			
+			$('#participant1-2-fr').text(fr[index_fr][0]);
+        	$('#participant2-2-fr').text(fr[index_fr][1]);
+        	$('#home-2-fr').text(fr[index_fr][2]);
+        	$('#draw-2-fr').text(fr[index_fr][3]);
+        	$('#away-2-fr').text(fr[index_fr][4]);
+        	$('#date-2-fr').text(fr[index_fr][5]);
+        	$('#league-2-fr').text(fr[index_fr][6]);
+			$('#leagueid-2-fr').text(fr[index_fr][7]);
+			$('#country-2-fr').text(fr[index_fr][8]);
+        	index_fr++;
+			if (index_fr === fr.length) {
+            	index_fr = 0;
+        	}
+			
+			$('#participant1-3-fr').text(fr[index_fr][0]);
+        	$('#participant2-3-fr').text(fr[index_fr][1]);
+        	$('#home-3-fr').text(fr[index_fr][2]);
+        	$('#draw-3-fr').text(fr[index_fr][3]);
+        	$('#away-3-fr').text(fr[index_fr][4]);
+        	$('#date-3-fr').text(fr[index_fr][5]);
+        	$('#league-3-fr').text(fr[index_fr][6]);
+			$('#leagueid-3-fr').text(fr[index_fr][7]);
+			$('#country-3-fr').text(fr[index_fr][8]);
+        	index_fr++;
+			if (index_fr === fr.length) {
+            	index_fr = 0;
+        	}
+			$('#participant1-4-fr').text(fr[index_fr][0]);
+        	$('#participant2-4-fr').text(fr[index_fr][1]);
+        	$('#home-4-fr').text(fr[index_fr][2]);
+        	$('#draw-4-fr').text(fr[index_fr][3]);
+        	$('#away-4-fr').text(fr[index_fr][4]);
+        	$('#date-4-fr').text(fr[index_fr][5]);
+        	$('#league-4-fr').text(fr[index_fr][6]);
+			$('#leagueid-4-fr').text(fr[index_fr][7]);
+			$('#country-4-fr').text(fr[index_fr][8]);
+        	index_fr++;
+			
+        	if (index_fr === fr.length) {
+            	index_fr = 0;
+        	}
+        	setTimeout(cycle_fr, 5000);
+    	}
+    	cycle_fr();
+		
+var index_de = 0;
+
+    	function cycle_de() {
+    		
+    		
+        	$('#participant1-1-de').text(de[index_de][0]);
+        	$('#participant2-1-de').text(de[index_de][1]);
+        	$('#home-1-de').text(de[index_de][2]);
+        	$('#draw-1-de').text(de[index_de][3]);
+        	$('#away-1-de').text(de[index_de][4]);
+        	$('#date-1-de').text(de[index_de][5]);
+        	$('#league-1-de').text(de[index_de][6]);
+			$('#leagueid-1-de').text(de[index_de][7]);
+			$('#country-1-de').text(de[index_de][8]);
+        	index_de++;
+        	if (index_de === de.length) {
+            	index_de = 0;
+        	}
+			
+			$('#participant1-2-de').text(de[index_de][0]);
+        	$('#participant2-2-de').text(de[index_de][1]);
+        	$('#home-2-de').text(de[index_de][2]);
+        	$('#draw-2-de').text(de[index_de][3]);
+        	$('#away-2-de').text(de[index_de][4]);
+        	$('#date-2-de').text(de[index_de][5]);
+        	$('#league-2-de').text(de[index_de][6]);
+			$('#leagueid-2-de').text(de[index_de][7]);
+			$('#country-2-de').text(de[index_de][8]);
+        	index_de++;
+        	if (index_de === de.length) {
+            	index_de = 0;
+        	}
+			
+			$('#participant1-3-de').text(de[index_de][0]);
+        	$('#participant2-3-de').text(de[index_de][1]);
+        	$('#home-3-de').text(de[index_de][2]);
+        	$('#draw-3-de').text(de[index_de][3]);
+        	$('#away-3-de').text(de[index_de][4]);
+        	$('#date-3-de').text(de[index_de][5]);
+        	$('#league-3-de').text(de[index_de][6]);
+			$('#leagueid-3-de').text(de[index_de][7]);
+			$('#country-3-de').text(de[index_de][8]);
+        	index_de++;
+        	if (index_de === de.length) {
+            	index_de = 0;
+        	}
+			
+			$('#participant1-4-de').text(de[index_de][0]);
+        	$('#participant2-4-de').text(de[index_de][1]);
+        	$('#home-4-de').text(de[index_de][2]);
+        	$('#draw-4-de').text(de[index_de][3]);
+        	$('#away-4-de').text(de[index_de][4]);
+        	$('#date-4-de').text(de[index_de][5]);
+        	$('#league-4-de').text(de[index_de][6]);
+			$('#leagueid-4-de').text(de[index_de][7]);
+			$('#country-4-de').text(de[index_de][8]);
+        	index_de++;
+			
+        	if (index_de === de.length) {
+            	index_de = 0;
+        	}
+        	setTimeout(cycle_de, 5000);
+    	}
+    	cycle_de();
+		
+
+	</script>
+<script type="text/javascript" src="./NetBet Welcome Bonus Offer_files/qtracker-v3-min.js" async="" defer=""></script><script type="text/javascript" src="./NetBet Welcome Bonus Offer_files/smartserve-4029.js" async="" defer=""></script><style type="text/css">body.session-n .session-y,body.session-n .session-error,body.session-y .session-n,body.session-y .session-error,body.session-error .session-n,body.session-error .session-y{display:none;}
+body.session-n .session-not-n,body.session-y .session-not-y,body.session-error .session-not-error{display:none;}
+body.optin-n .optin-y,body.optin-n .optin-x,body.optin-n .optin-submit,body.optin-n .optin-inactive,body.optin-n .optin-error,body.optin-y .optin-n,body.optin-y .optin-x,body.optin-y .optin-submit,body.optin-y .optin-inactive,body.optin-y .optin-error,body.optin-x .optin-n,body.optin-x .optin-y,body.optin-x .optin-submit,body.optin-x .optin-inactive,body.optin-x .optin-error,body.optin-submit .optin-n,body.optin-submit .optin-y,body.optin-submit .optin-x,body.optin-submit .optin-inactive,body.optin-submit .optin-error,body.optin-inactive .optin-n,body.optin-inactive .optin-y,body.optin-inactive .optin-x,body.optin-inactive .optin-submit,body.optin-inactive .optin-error,body.optin-error .optin-n,body.optin-error .optin-y,body.optin-error .optin-x,body.optin-error .optin-submit,body.optin-error .optin-inactive{display:none;}
+body.optin-n .optin-not-n,body.optin-y .optin-not-y,body.optin-x .optin-not-x,body.optin-submit .optin-not-submit,body.optin-inactive .optin-not-inactive,body.optin-error .optin-not-error{display:none;}
+body.soft-n .soft-y,body.soft-y .soft-n{display:none;}
+body.soft-n .soft-not-n,body.soft-y .soft-not-y{display:none;}
+body.prospect-y .prospect-n,body.prospect-n .prospect-y{display:none;}
+body.prospect-y .prospect-not-y,body.prospect-n .prospect-not-n{display:none;}
+body.mobile-n .mobile-y,body.mobile-y .mobile-n{display:none;}
+body.mobile-n .mobile-not-n,body.mobile-y .mobile-not-y{display:none;}
+body.resubmit-n .resubmit-y,body.resubmit-y .resubmit-n{display:none;}
+body.resubmit-n .resubmit-not-n,body.resubmit-y .resubmit-not-y{display:none;}
+body.allowed-y .allowed-n,body.allowed-n .allowed-y{display:none;}
+body.allowed-y .allowed-not-y,body.allowed-n .allowed-not-n{display:none;}
+body.select-0 .select-1,body.select-0 .select-2,body.select-0 .select-3,body.select-0 .select-4,body.select-0 .select-5,body.select-1 .select-0,body.select-1 .select-2,body.select-1 .select-3,body.select-1 .select-4,body.select-1 .select-5,body.select-2 .select-0,body.select-2 .select-1,body.select-2 .select-3,body.select-2 .select-4,body.select-2 .select-5,body.select-3 .select-0,body.select-3 .select-1,body.select-3 .select-2,body.select-3 .select-4,body.select-3 .select-5,body.select-4 .select-0,body.select-4 .select-1,body.select-4 .select-2,body.select-4 .select-3,body.select-4 .select-5,body.select-5 .select-0,body.select-5 .select-1,body.select-5 .select-2,body.select-5 .select-3,body.select-5 .select-4{color: gray;}
+body.select-0 .select-not-0,body.select-1 .select-not-1,body.select-2 .select-not-2,body.select-3 .select-not-3,body.select-4 .select-not-4,body.select-5 .select-not-5{color: gray;}
+body.expired-n .expired-y,body.expired-y .expired-n{display:none;}
+body.expired-n .expired-not-n,body.expired-y .expired-not-y{display:none;}
+body.loaded-n .loaded-y,body.loaded-y .loaded-n{display:none;}
+body.loaded-n .loaded-not-n,body.loaded-y .loaded-not-y{display:none;}
+body.app-na .app-ios,body.app-na .app-android,body.app-ios .app-na,body.app-ios .app-android,body.app-android .app-na,body.app-android .app-ios{display:none;}
+body.app-na .app-not-na,body.app-ios .app-not-ios,body.app-android .app-not-android{display:none;}
+</style></head>
+<body class="session-n optin-n soft-n prospect-y mobile-n resubmit-n allowed-y select-0 expired-n app-na loaded loaded-y loaded">
+<!-- body start -->
+<script type="text/javascript">// <![CDATA[
+    document.body.className=$.map(STATELY.get(),function(i,e) {if (/^(test|testmode)$/.test(e)==false) return e+'-'+i}).join(' ');
+    console.log($.map(STATELY.get(),function(i,e) {if (/^(test|testmode)$/.test(e)==false) return e+'-'+i}).join(' ') );
+// ]]></script>
+
+
+    <div id="body-wrapper" class="boom-lines boom-lines-under-image cta-enhanced underlayer- light-button arrows-carbon logo-partner product-promos social-boxes simple- fallback-">
+        <!-- header start -->
+        <header class="main-header soft-n">
+    <div class="row">
+        <div class="columns small-6 medium-3 logo-wrapper">
+            <a target="_blank" class="logo casino-carbon" href="https://www.netbet.com/"></a>
+        </div>
+        <div class="columns small-12 medium-6 medium-pull-3 header-text">
+            <div class="wrap">
+                <span>Welcome Bonus Offer</span>
+            </div>
+        </div>
+    </div>
+</header>
+        <!-- header end --><!-- slider start -->
+        <div id="slider" class="main-slider">
+            <div class="slide">
+                
+            </div>
+        </div>
+        <!-- slider end -->        <!-- content start -->
+        <div class="content-holder">
+			<div class="triangle-left"></div>
+			<div class="triangle-right"></div>
+			<div style="background: #000000 url(&#39;./img/bg.jpg&#39;); background-position: top center; background-size: cover; background-repeat: no-repeat;">
+            <div class="row price-wrapper" style="min-height: 100vh;">
+                <!-- logo games start -->
+                <div class="columns xxlarge-6 xlarge-6 xlarge-push-6 large-12 medium-12 small-12 logo-game-wrapper">
+                    
+                </div>
+                <!-- logo games end --><!-- cta standard start -->
+                <div class="columns xxlarge-6 xlarge-6 xlarge-push-12 large-12 medium-12 small-12 main-cta-wrapper">
+                    <div class="main-cta">
+                       <div class="justify">
+                        <h1 class="text-1"></h1>
+                        <h2 class="text-2">Get a</h2>
+                        <h2 class="text-3">£50</h2>
+                        <h3 class="text-4">Free Bet</h3>
+                        <h3 class="text-5"></h3>
+                    </div>
+                    <!--<div class="additional">
+                        <div class="title"></div>
+                        <div class="more">
+                            <div class="wrapper">Claim a £20 free bet when you place 5 x £10 qualifying bets up to a max of £100.
+Min odds 1 / 2 (1.5) Cash Out and Exchange bets excluded. Additional Terms apply.</div>
+                        </div>
+                    </div>-->
+                   
+                    <div class="button-wrapper">
+                        <a data-promocode="WELCOME50" data-cta-action="same" href="https://sport.netbet.com/" target="_blank" class="btn-primary button loaded-y register-cta">BET NOW</a>
+                        <span class="terms-wrap">
+                            <a target="_blank" href="https://sport.netbet.com/promotions/promo_welcomeoffer/" class="terms">T&amp;C's Apply</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- cta standard end -->            </div></div>
+			<!-- live odds start -->
+	
+            <div class="row offer-wrapper">
+                <div class="str-button">
+                    <span> </span><span> </span>
+                </div>
+                <p class="offer-text" style="top: -2.2em; color: #ffffff;">DISCOVER MORE</p>
+            </div>
+	<div class="odds-wrapper">
+	<div class="triangle-right-above"></div>
+	<div class="triangle-left"></div>
+	<div class="triangle-right"></div>
+			<div class="odds-title">
+				<span class="odds-title-text">BEST ODDS</span>
+			</div>
+			
+            <div class="row collapse">
+                <div class="columns small-12 item item-1" style="color: #333333; padding: 0 3em;">
+                    <div class="wrapper dark-color">
+                        <div>
+                            <div>
+                                <div class="col-xs-12 text-center odd">
+        	
+         		<div class="tabs">
+    
+			<div class="tab" id="england"> 
+						<input type="radio" id="tab-1" name="tab-group-1" checked="">
+						<label for="tab-1" style="background-image: url(&#39;./img/flags/1.png&#39;); margin-left: 6px;"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-en">Premier League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1">
+											<h2 id="participant1-1-en">Stoke City</h2>
+          								</div>
+										<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2">
+											<h2 id="participant2-1-en">Man City</h2>
+          								</div>
+										<div id="date-1-en">05/12/2015 13:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-en">5.05</div>
+          							<div class="col-xs-4 draw" id="draw-1-en">3.80</div>
+          							<div class="col-xs-4 away" id="away-1-en">1.71</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-en">Premier League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-en">Arsenal</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-en">Sunderland</h2></div>
+          								<div id="date-2-en">05/12/2015 16:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-en">1.29</div>
+          							<div class="col-xs-4 draw" id="draw-2-en">5.60</div>
+          							<div class="col-xs-4 away" id="away-2-en">11.50</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-en">Premier League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-en">Man United</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-en">West Ham</h2></div>
+          								<div id="date-3-en">05/12/2015 16:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-en">1.43</div>
+          							<div class="col-xs-4 draw" id="draw-3-en">4.45</div>
+          							<div class="col-xs-4 away" id="away-3-en">8.50</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-en">Premier League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-en">Southampton</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-en">Aston Villa</h2></div>
+          								<div id="date-4-en">05/12/2015 16:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-en">1.51</div>
+          							<div class="col-xs-4 draw" id="draw-4-en">4.10</div>
+          							<div class="col-xs-4 away" id="away-4-en">7.00</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	<div class="tab" id="italy"> 
+						<input type="radio" id="tab-2" name="tab-group-1" checked="">
+						<label for="tab-2" style="background-image: url(&#39;./img/flags/3.png&#39;)"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-it">Serie A</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-1-it">Lazio</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-1-it">Juventus</h2></div>
+          								<div id="date-1-it">04/12/2015 20:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-it">3.40</div>
+          							<div class="col-xs-4 draw" id="draw-1-it">3.20</div>
+          							<div class="col-xs-4 away" id="away-1-it">2.25</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-it">Serie A</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-it">Torino</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-it">AS Roma</h2></div>
+          								<div id="date-2-it">05/12/2015 15:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-it">2.80</div>
+          							<div class="col-xs-4 draw" id="draw-2-it">2.95</div>
+          							<div class="col-xs-4 away" id="away-2-it">2.70</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-it">Serie A</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-it">Inter Milan</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-it">Genoa</h2></div>
+          								<div id="date-3-it">05/12/2015 20:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-it">1.63</div>
+          							<div class="col-xs-4 draw" id="draw-3-it">3.90</div>
+          							<div class="col-xs-4 away" id="away-3-it">5.65</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-it">Serie A</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-it">Bologna</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-it">Napoli</h2></div>
+          								<div id="date-4-it">06/12/2015 12:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-it">6.90</div>
+          							<div class="col-xs-4 draw" id="draw-4-it">4.30</div>
+          							<div class="col-xs-4 away" id="away-4-it">1.47</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	<div class="tab" id="spain">
+						<input type="radio" id="tab-3" name="tab-group-1" checked="">
+						<label for="tab-3" style="background-image: url(&#39;./img/flags/2.png&#39;)"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-es">La Liga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-1-es">Real Madrid</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-1-es">Getafe</h2></div>
+          								<div id="date-1-es">05/12/2015 16:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-es">1.12</div>
+          							<div class="col-xs-4 draw" id="draw-1-es">9.25</div>
+          							<div class="col-xs-4 away" id="away-1-es">19.00</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-es">La Liga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-es">Granada CF</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-es">Atletico Madrid</h2></div>
+          								<div id="date-2-es">05/12/2015 18:15:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-es">7.00</div>
+          							<div class="col-xs-4 draw" id="draw-2-es">3.65</div>
+          							<div class="col-xs-4 away" id="away-2-es">1.56</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-es">La Liga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-es">Valencia</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-es">Barcelona</h2></div>
+          								<div id="date-3-es">05/12/2015 20:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-es">9.25</div>
+          							<div class="col-xs-4 draw" id="draw-3-es">5.30</div>
+          							<div class="col-xs-4 away" id="away-3-es">1.32</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-es">La Liga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-es">Dep La Coruna</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-es">Sevilla</h2></div>
+          								<div id="date-4-es">05/12/2015 22:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-es">2.95</div>
+          							<div class="col-xs-4 draw" id="draw-4-es">3.40</div>
+          							<div class="col-xs-4 away" id="away-4-es">2.35</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	<div class="tab" id="germany"> 
+						<input type="radio" id="tab-4" name="tab-group-1" checked="">
+						<label for="tab-4" style="background-image: url(&#39;./img/flags/5.png&#39;)"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-de">1.Bundesliga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-1-de">Werder Bremen</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-1-de">Cologne</h2></div>
+          								<div id="date-1-de">12/12/2015 15:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-de">2.35</div>
+          							<div class="col-xs-4 draw" id="draw-1-de">3.30</div>
+          							<div class="col-xs-4 away" id="away-1-de">2.90</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-de">1.Bundesliga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-de">Bayern Munchen</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-de">Ingolstadt</h2></div>
+          								<div id="date-2-de">12/12/2015 15:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-de">1.03</div>
+          							<div class="col-xs-4 draw" id="draw-2-de">13.00</div>
+          							<div class="col-xs-4 away" id="away-2-de">38.75</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-de">1.Bundesliga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-de">Wolfsburg</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-de">Hamburg</h2></div>
+          								<div id="date-3-de">12/12/2015 15:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-de">1.59</div>
+          							<div class="col-xs-4 draw" id="draw-3-de">3.90</div>
+          							<div class="col-xs-4 away" id="away-3-de">5.25</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-de">1.Bundesliga</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-de">Leverkusen</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-de">Monchengladbach</h2></div>
+          								<div id="date-4-de">12/12/2015 18:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-de">1.77</div>
+          							<div class="col-xs-4 draw" id="draw-4-de">3.70</div>
+          							<div class="col-xs-4 away" id="away-4-de">4.10</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	<div class="tab" id="france"> 
+						<input type="radio" id="tab-5" name="tab-group-1" checked="">
+						<label for="tab-5" style="background-image: url(&#39;./img/flags/4.png&#39;)"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-fr">Ligue 1</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-1-fr">Nice</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-1-fr">Paris St-Germain</h2></div>
+          								<div id="date-1-fr">04/12/2015 20:30:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-fr">6.60</div>
+          							<div class="col-xs-4 draw" id="draw-1-fr">4.15</div>
+          							<div class="col-xs-4 away" id="away-1-fr">1.51</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-fr">Ligue 1</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-fr">Lyon</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-fr">Angers</h2></div>
+          								<div id="date-2-fr">05/12/2015 17:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-fr">1.59</div>
+          							<div class="col-xs-4 draw" id="draw-2-fr">3.70</div>
+          							<div class="col-xs-4 away" id="away-2-fr">6.65</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-fr">Ligue 1</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-fr">Caen</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-fr">Lille</h2></div>
+          								<div id="date-3-fr">05/12/2015 20:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-fr">2.40</div>
+          							<div class="col-xs-4 draw" id="draw-3-fr">3.00</div>
+          							<div class="col-xs-4 away" id="away-3-fr">3.25</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-fr">Ligue 1</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-fr">Bastia</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-fr">Monaco</h2></div>
+          								<div id="date-4-fr">05/12/2015 20:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-fr">3.50</div>
+          							<div class="col-xs-4 draw" id="draw-4-fr">3.20</div>
+          							<div class="col-xs-4 away" id="away-4-fr">2.20</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	<div class="tab" id="ucl"> 
+						<input type="radio" id="tab-6" name="tab-group-1" checked="">
+						<label for="tab-6" style="background-image: url(&#39;./img/flags/6.png&#39;)"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-ucl">Champions League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-1-ucl">Dynamo Kiev</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-1-ucl">Maccabi Tel Aviv</h2></div>
+          								<div id="date-1-ucl">09/12/2015 20:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-ucl">1.14</div>
+          							<div class="col-xs-4 draw" id="draw-1-ucl">7.75</div>
+          							<div class="col-xs-4 away" id="away-1-ucl">19.75</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-ucl">Champions League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-ucl">Chelsea</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-ucl">Porto</h2></div>
+          								<div id="date-2-ucl">09/12/2015 20:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-ucl">1.95</div>
+          							<div class="col-xs-4 draw" id="draw-2-ucl">3.40</div>
+          							<div class="col-xs-4 away" id="away-2-ucl">4.00</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-ucl">Champions League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-ucl">Olympiakos</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-ucl">Arsenal</h2></div>
+          								<div id="date-3-ucl">09/12/2015 20:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-ucl">3.40</div>
+          							<div class="col-xs-4 draw" id="draw-3-ucl">3.60</div>
+          							<div class="col-xs-4 away" id="away-3-ucl">2.10</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-ucl">Champions League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-ucl">Valencia</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-ucl">Lyon</h2></div>
+          								<div id="date-4-ucl">09/12/2015 20:45:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-ucl">1.39</div>
+          							<div class="col-xs-4 draw" id="draw-4-ucl">4.75</div>
+          							<div class="col-xs-4 away" id="away-4-ucl">8.00</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	<div class="tab" id="uel"> 
+						<input type="radio" id="tab-7" name="tab-group-1" checked="">
+						<label for="tab-7" style="background-image: url(&#39;./img/flags/7.png&#39;)"></label>
+       
+					<div class="content">
+          		<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match1" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-1-uel">Europa League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-1-uel">Gilan Gabala</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-1-uel">FC Krasnodar</h2></div>
+          								<div id="date-1-uel">10/12/2015 19:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-1-uel">4.20</div>
+          							<div class="col-xs-4 draw" id="draw-1-uel">3.50</div>
+          							<div class="col-xs-4 away" id="away-1-uel">1.87</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+			
+          		
+          	</div></a>
+          	<!-- End of row for Match 1-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match2" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-2-uel">Europa League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-2-uel">Napoli</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-2-uel">Legia Warsaw</h2></div>
+          								<div id="date-2-uel">10/12/2015 19:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-2-uel">1.50</div>
+          							<div class="col-xs-4 draw" id="draw-2-uel">4.35</div>
+          							<div class="col-xs-4 away" id="away-2-uel">6.10</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+          	<!-- End of row for Match 2-->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match3" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-3-uel">Europa League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-3-uel">Slovan Liberec</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-3-uel">Marseille</h2></div>
+          								<div id="date-3-uel">10/12/2015 19:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-3-uel">3.85</div>
+          							<div class="col-xs-4 draw" id="draw-3-uel">3.50</div>
+          							<div class="col-xs-4 away" id="away-3-uel">1.95</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div>
+			</a>
+          	<!-- End of row for  Match 3 -->
+          	<a data-promocode="WELCOME50" href="https://sport.netbet.com/" target="_blank"><div class="odds-row ">
+          			<div class="col-xs-12  odd-match">
+          				<div id="match4" class="match">
+
+          					
+          						<div class=" odd-panel">
+          							<div class="col-sm-3  col-xs-12">
+          								<div class="odd-name text-center">
+          									<h2 id="league-4-uel">Europa League</h2>
+          								
+          								</div>
+          							</div>
+          							<!-- End of col xs 3 -->
+          							
+          							<div class=" col-xs-12 col-sm-5 text-center odd-match-name">
+          								<div class="team-1"><h2 id="participant1-4-uel">Groningen</h2></div>
+          								<h2 class="v"><span>&nbsp;VS&nbsp;</span></h2>
+          								<div class="team-2"><h2 id="participant2-4-uel">Braga</h2></div>
+          								<div id="date-4-uel">10/12/2015 19:00:00</div>
+          								<!-- End of match name -->
+          							</div>
+          							<!--  End of col-xs-5 -->
+          						<div class="col-sm-4  col-xs-12 odd-text ">
+          							<div class="col-xs-4 home" id="home-4-uel">3.35</div>
+          							<div class="col-xs-4 draw" id="draw-4-uel">3.35</div>
+          							<div class="col-xs-4 away" id="away-4-uel">2.15</div>
+          						</div>
+          						<!-- End of score -->
+          					</div>
+          					<!-- End of panel -->
+          					
+          				
+          			</div>
+          			<!-- End of Match -->
+          			
+          		</div>
+          		
+          	</div></a>
+			</div>
+			</div>
+          	
+          	</div>
+          	
+			
+			
+        
+         
+        </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="odds-footer"></div>
+	</div>    
+	<!--live odds end -->
+            <!-- steps start -->
+            <div class="step-wrapper">
+             <div class="row step-cta-top">
+                <div>
+                    <div>
+
+                        <a data-promocode="WELCOME50" data-cta-action="same" href="https://sport.netbet.com/" target="_blank" class="btn-primary button loaded-y register-cta">BET NOW</a>
+                    </div>
+                    <div><a class="terms" href="https://sport.netbet.com/promotions/promo_welcomeoffer/">T&amp;C's Apply - See Offer details</a></div>
+                </div>
+            </div>
+            <div class="row step-holder-wrapper">
+                <div class="columns xxlarge-4 xlarge-4 xlarge-uncentered large-10 large-centered large-centered medium-10 medium-centered small-12 step-holder">
+                    <div class="step">
+                        <div class="number">1</div>
+                        <div class="text">
+                            <h4 class="heading">Join</h4>
+                            <p class="sub-heading">Register your new account using Promo code <strong>WELCOME50</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns xxlarge-4 xlarge-4 xlarge-uncentered large-10 large-centered large-centered medium-10 medium-centered small-12 step-holder">
+                    <div class="step">
+                        <div class="number">2</div>
+                        <div class="text">
+                            <h4 class="heading">Deposit</h4>
+                            <p class="sub-heading">Make a deposit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns xxlarge-4 xlarge-4 xlarge-uncentered large-10 large-centered large-centered medium-10 medium-centered small-12 step-holder">
+                    <div class="step">
+                        <div class="number">3</div>
+                        <div class="text">
+                            <h4 class="heading">Bonus</h4>
+                            <p class="sub-heading">Rollover your deposit once (x1) on qualifying bets and we will credit the bonus to your account.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row step-cta-bottom">
+                <div>
+                    <p class="text-1"></p>
+                    <div>
+                     <a data-promocode="WELCOME50" data-cta-action="same" href="https://sport.netbet.com/" target="_blank" class="btn-primary button loaded-y register-cta">BET NOW</a>
+                     </div>
+                 <div><a class="terms" href="https://sport.netbet.com/promotions/promo_welcomeoffer/">Full Terms and Conditions</a></div>
+             </div>
+         </div>
+    </div>-->
+    <!-- steps end -->
+	
+	<!-- bottom blocks start -->
+    <div class="bottom-blocks">
+        
+            <div class="row collapse">
+                <div class="columns small-12 medium-12 large-12 xlarge-4 item item-3" style="height: 28em;">
+                    <div class="wrapper dark-color" style="background: -webkit-linear-gradient(#baff00, #64b300);">
+                        <div>
+                            <div>
+								<p class="text-0">Our Promotions</p>
+                                <p class="text-1">Sunday Free</p>
+                                <p class="text-2">Bet every other day in the week</p>
+                                <p class="text-3">And get 20% back for Sunday</p>
+                                <div class="button-wrapper">
+                                     <a data-promocode="WELCOME50" data-cta-action="same" href="https://sport.netbet.com/" target="_blank" class="btn-primary button loaded-y register-cta">BET NOW</a>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="columns small-12 medium-12 large-12 xlarge-4 item item-2" style="height: 28em;">
+                    <div class="wrapper light-color" style="background-color: #000000;">
+						<div style="z-index: 1; position: relative; margin-top:10%;">
+						<iframe id="ytplayer" frameborder="0" allowfullscreen="1" title="YouTube video player" width="100%" height="60%" src="./NetBet Welcome Bonus Offer_files/pNV2boiY2wU.html"></iframe>
+						</div>
+                        <div style="position: absolute; z-index: 2; top: 0px; background-color: rgba(0,0,0,0.4)">
+                            <div>
+								<p class="text text-0">Bet on Mobile</p>
+                                <p class="text text-1"></p>
+                                <p class="text text-2"></p>
+                                <p class="text text-3"></p>
+                                <div class="button-wrapper"><a data-promocode="WELCOME50" data-cta-action="same" href="https://sport.netbet.com/" target="_blank" class="btn-primary button mobile-n loaded-y register-cta">BET NOW</a>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns small-12 medium-12 large-12 xlarge-4 item item-4" style="height: 28em;">
+                    <div class="wrapper light-color" style="background: url(&#39;./img/promotions.jpg&#39;); padding-top:0; background-color: #000;">
+                        <div>
+                            <div>
+								<p class="text-0">Weekend Promotions</p>
+								<p class="text-1"></p>
+                                <div class="button-wrapper">
+                                     <a data-promocode="WELCOME50" data-cta-action="same" href="https://sport.netbet.com/" target="_blank" class="btn-primary button loaded-y register-cta">BET NOW</a>
+                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+		
+	</div>
+</div>
+    <!-- bottom blocks stop -->        </div>
+    <!-- content end -->
+    <!-- footer start -->
+	<!--<a href="http://m.netbet.com" class="logo logo-android">
+                                        <div>
+                                            <div>
+                                                <img src="./img/apple-logo.png" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="https://sport.netbet.com/app/" class="logo logo-android">
+                                        <div>
+                                            <div>
+                                                <img src="./img/android-logo.png" />
+                                            </div>
+                                        </div>
+                                    </a>-->
+    <footer>
+    <div class="container-fluid">
+      <div class="row terms">
+        <div class="col-xs-11 hidden-xs">
+          <br>            
+          <p class="pull-left hidden-xs terms">
+            *<a href="http://go.livepartners.com/DEV-JACK/landing-page-251115/index3.php#modal">
+              <span>Terms &amp; Conditions</span>
+
+            </a>
+          </p>
+          
+          <br>
+
+        </div> 
+      </div>
+      <!-- end of terms and condition large screen row -->
+
+      <div class="row terms">
+        <p id="terms_mobile" class="visible-xs text-center terms">
+          <br>
+          <a href="http://go.livepartners.com/DEV-JACK/landing-page-251115/index3.php#modal" rel="nofollow">* Terms &amp; Conditions </a>
+        </p>
+      </div>
+      <!-- end of ters and condition small screen row -->
+
+      <div class="row">
+          <div class="col-sm-6 margin-bot10 payment">
+            <h3>PAYMENT METHODS</h3>
+             		
+	            	 			 				<a rel="nofollow" class="payment-mastercard"></a>
+          	 			
+          	<a rel="nofollow" class="payment-visa"></a>
+          	<!-- <a rel="nofollow" class="payment-clickandbuy"></a> -->
+          	<a rel="nofollow" class="payment-moneybookers"></a>
+          	<a rel="nofollow" class="payment-neteller"></a>
+          	<a rel="nofollow" class="payment-click2pay"></a>
+          	<a rel="nofollow" class="payment-ukash"></a>
+          	<a rel="nofollow" class="payment-entropay"></a>
+          	<a rel="nofollow" class="payment-paysafecard"></a>
+          	<a rel="nofollow" class="payment-skrill"></a>
+          	<a rel="nofollow" class="payment-online"></a>
+          	<a rel="nofollow" class="payment-dinersclub"></a>
+          	<a rel="nofollow" class="payment-ecard"></a>
+          	<a rel="nofollow" class="payment-sofort"></a>
+          	<a rel="nofollow" class="payment-webmoney"></a>
+          	<a rel="nofollow" class="payment-qiwi"></a>
+          	<a rel="nofollow" class="payment-ticketpremium"></a>
+          	<a rel="nofollow" class="payment-monetaru"></a>
+          	<a class="pay_footer-payment-trustly" rel="nofollow"></a>
+          	<a class="pay_footer-payment-euteller" rel="nofollow"></a>
+          	<a class="pay_footer-payment-astropay" rel="nofollow"></a>
+	            	
+	          
+          </div>
+         
+     
+         <!-- end of Payment footer logo-->
+         
+         	<div class="col-sm-6 margin-bot10 responsible">
+         		<h3>RESPONSIBLE GAMING</h3>
+         	
+            		<a rel="nofollow" class="responsible gamcare"></a>
+<a rel="nofollow" class="responsible adictel"></a>
+<a rel="nofollow" class="responsible responsiblegaming"></a>
+<a rel="nofollow" class="responsible gambleaware"></a>
+<a rel="nofollow" class="responsible rng"></a>
+         		<!-- <a rel="nofollow" class="responsible ibas"></a>
+         		<div id="commission_placeholder_noload">
+         			<a rel="nofollow" href="https://www.authorisation.mga.org.mt/verification.aspx?lang=en&company=c21f61fb-a60a-4b6c-8fde-3f2c6d2eedab" target="_blank"><img id="uk_gambling_commission" src="img/mga.png"></a>
+         			
+         		</div> -->
+<div id="lga_placeholder_noload">
+   <a rel="nofollow" target="_blank">
+   	         <img src="./NetBet Welcome Bonus Offer_files/mga.png">
+       </a>
+</div>
+            		       
+         	</div>
+         
+        
+        <!-- end of licence logo mobile -->
+         	<div class="licence">
+             
+          		<div class="col-xs-12  footer-text">
+            	            <p class="text-center">
+	
+				    NetBet © 2001 - 2015. All rights reserved.<br>
+				    NetBet Website is owned and operated by Cosmo Gaming Company Limited, 209, Marina street, Pieta PTA 9041, Malta.
+				    <br>
+				    
+				   Licence No. MGA/CL1/272/2006, MGA/CL1/608/2009, MGA/CL3/608/2009, MGA/CL1/855/2012, MGA/CL2/272/2012, MGA/CL1/995/2014, MGA/CL1/1043/2014 NetBet <br>
+				     Website is licensed and regulated by the Malta Gaming Authority. <a href="http://www.mga.org.mt/" rel="nofollow">MGA</a>. <br>
+				 Cosmo is licensed in the Republic of Ireland under licence n. 1010329. 
+				   <br>
+				     Access to online money game sites is forbidden under some national laws.<br>
+				    It is the responsibility of the individual player to ensure that they are acting within the law when accessing the NetBet site.<br>
+				    Gambling carries financial risk and a risk of dependency. Play responsibly.
+	
+	            </p>
+            
+                      </div>
+         
+        </div>
+        <!-- end of licence for large screen row -->
+      
+    </div>
+    
+   </div></footer>
+  <!-- end of footer -->
+<script>
+
+var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	  
+var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '60%',
+          width: '100%',
+          videoId: 'pNV2boiY2wU',
+		  playerVars: {
+			autoplay: '1',
+			playlist: 'pNV2boiY2wU',
+			modestbranding: '1',
+			loop: '1',
+			controls: '0',
+			start: '2'
+		  },
+		  events: {
+			'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+		  }
+        });
+      }
+	  
+	  function onPlayerReady(event) {
+		event.target.playVideo();
+		event.target.mute();
+	  }
+	  
+	  var done = false;
+	  function onPlayerStateChange(event) {
+		if (event.data == YT.PlayerState.PLAYING && !done) {
+			setTimeout(stopVideo, 6000);
+			done = true;
+		}
+	  }
+</script>
+    <script>
+	
+
+	
+var logos = [63, 29178, 169, 35354, 12865]
+	var searchForRfr = $(location).attr('search');
+
+	var rfrString = "rfr=";
+	var pidString = "pid=";
+
+	if (searchForRfr.indexOf(rfrString) > -1 ) {
+
+		
+		var getWholeRfr = searchForRfr.substring(searchForRfr.indexOf(rfrString) + 4);
+
+		function getNumCode(code) {
+			var theNum = "";
+			for (var letter = 0; letter < code.length; letter ++) {
+				if (! isNaN(code[letter]) ) {
+					theNum += code[letter]
+					
+				} else {
+					break;
+				}; 
+                                
+			} 
+                        return theNum;
+		}
+		
+		var checkFor = getNumCode(getWholeRfr)
+                
+		checkFor = parseInt(checkFor); 
+                console.log("checkFor ", checkFor)
+		if (checkFor == 12865) {
+			var getPid = searchForRfr.substring(searchForRfr.indexOf(pidString) + 4);
+			var pidNum = parseInt(getNumCode(getPid))
+			if (pidNum == 7202 || pidNum == 1269947) {
+				var theUrl
+				if (pidNum == 7202) {
+					theUrl = "https://promotions.cdnbf.net/media/english_uk/images/april_2015/may_june/remain/img/aff12865-1.png?0209"
+				}
+				else {
+					theUrl = "https://promotions.cdnbf.net/media/english_uk/images/april_2015/may_june/remain/img/aff12865-2.png?0209"
+				}
+				$('.logo-games img').attr("src", theUrl)
+                $('body').addClass("aff-present")
+				$('.logo-games img').addClass('image-opacity')
+				$('.logo-games img').show()
+			}
+		}
+		else {
+			for (var i = 0; i < logos.length; i ++) {
+				if (logos[i] == checkFor ) {
+	                console.log("success")
+					var theUrl = "https://promotions.cdnbf.net/media/english_uk/images/april_2015/may_june/remain/img/aff"
+					theUrl += checkFor
+					var theUrlEnd = ".png?0209"
+					theUrl += theUrlEnd
+
+					$('.logo-games img').attr("src", theUrl)
+	                $('body').addClass("aff-present")
+					$('.logo-games img').addClass('image-opacity')
+					$('.logo-games img').show()
+				}
+			}
+		}
+		
+
+	}
+
+</script>
+
+<script type="text/javascript">// <![CDATA[
+ $('.step-wrapper .offer-wrapper, .str-button').click(function(ev){
+ev.stopPropagation()
+    var viewportHeight = $('.offer-wrapper').offset().top;
+    $('html, body').animate({scrollTop : (viewportHeight)-47},600);
+    return false;
+})
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    $('.additional .title').click(function(ev){
+        ev.stopPropagation()
+    })
+
+    var bet_bundle_title = $('.additional .title').text()
+    var bet_bundle_copy = $('.additional .wrapper').text()
+    $('.additional').css("background", "transparent")
+    $('.additional .title').hide()
+
+    if (bet_bundle_title.length > 2 && bet_bundle_copy.length < 2){
+        $('.additional .title').show().addClass("no-arrow")
+        $('.additional .more').hide()
+        $('.additional').css("background", "#1e1e1e")
+
+    } else if (bet_bundle_title.length > 2 && bet_bundle_copy.length > 2) {
+        $('.additional .title').show()
+        $('.additional .more').show()
+        $('.additional').css("background", "#1e1e1e")
+    }
+    //yellow - default value #ffbe00;
+var first_three_bars = '#baff00';
+    //white - default value #fff
+var fourth_bar = '#baff00';
+
+//blue - default value #0061ec;
+var fifth_bar = '#1E1E1E';
+
+
+    //default color is '#fafafa'
+
+var arrow_color = '#fafafa'
+    new_arrow_color = "transparent transparent " + arrow_color + arrow_color
+
+    $('.boom-lines-elements-top span.boom-lines-line-3, .boom-lines-elements-top span.boom-lines-line-4, .boom-lines-elements-top span.boom-lines-line-5').css("border-bottom-color", first_three_bars)
+    $('.boom-lines-line-2').css("border-bottom-color", fourth_bar)
+    $('.boom-lines-line-1').css("border-bottom-color", fifth_bar)
+// ]]></script>
+</div>
+
+<script type="text/javascript">// <![CDATA[
+    $(".main-cta .justify, .main-cta .text-2, .main-cta .text-3, .main-cta .text-4, .main-cta .text-5, .logo-game-wrapper").click(function() {
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          window.location = $(".register-cta.mobile-y").attr("href"); 
+      }
+      else {
+          window.location = $(".register-cta").attr("href"); }
+          return false;
+
+      });
+// ]]></script>
+
+
+<!-- body end -->
+
+
+<!-- GLOBAL_BODY_END START -->
+<!-- GLOBAL_BODY_END END -->
+
+
+
+
+</div></body></html>

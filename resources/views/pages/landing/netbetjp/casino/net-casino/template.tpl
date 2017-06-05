@@ -1,0 +1,1 @@
+{include file="pages/landing/{$domain}/{$product}/blond-girl/template.tpl" }

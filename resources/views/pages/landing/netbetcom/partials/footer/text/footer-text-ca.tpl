@@ -1,0 +1,1 @@
+{include file="pages/landing/netbetcom/partials/footer/text/footer-text-en.tpl"}

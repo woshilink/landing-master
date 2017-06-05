@@ -1,0 +1,135 @@
+body{
+	background-color: #000;
+}
+.offscreen{
+	position: absolute;
+	margin-top: -5000px;
+}
+.navbar{
+	margin-bottom: 0;
+}
+.bg-black{
+	background-color: #000;
+}
+.logo{
+	margin-top: 10px;
+}
+#logo img{
+	width: 200px;
+	padding: 10px;
+}
+.header-text{
+	color: white;
+	margin-top: 15px;
+}
+.main{
+	background-image: url('img/bg.jpg');
+	-webkit-background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+}
+.offer{
+	margin-top: 115px;
+}
+
+.button{
+	margin-top: -30px;
+}
+
+.frame{
+	margin-top: 115px;
+	-webkit-background-size: contain;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.frame video{
+	padding: 4%;
+}
+.steps{
+	margin-top: 20px;
+}
+.col.center{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin:0;
+}
+.licence{
+	margin-top: 20px;
+}
+.licence img {
+	width: 140px;
+}
+.licence-logo-mobile{
+	margin-top: 20px;
+}
+
+.licence-logo-mobile img{
+	width: 150px;
+}
+.footer-text{
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+	color:#666666;
+}
+.logoImg {
+	position: relative;
+	top: -1em;
+	width: 80%;
+	left: 10%;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+ /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+
+    	.offer {
+    		margin-top: 160px;
+			}
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+		.offer {
+    		margin-top: 155px;
+		}
+    	.button{
+    		margin-top: -20px;
+    	}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    	.header-text{
+    		margin-top: 0;
+    	}
+			.col-xs-12{
+				padding-right: 0;
+				padding-left: 0;
+			}
+			.logoImg {
+				top: -10em;
+				width: 30%;
+			}
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */
+    @media only screen and (max-width : 320px) {
+
+    }

@@ -1,0 +1,361 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url("../fonts/BebasNeue.otf");
+}
+
+
+
+body{
+	background-color: black;
+}
+.container-fluid{
+	max-width: 960px;
+}
+.visible-xxs{
+	display: none;
+}
+nav{
+	background-color: black;
+	color: white;
+}
+
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+
+}
+
+.navbar{
+	margin-bottom: 0;
+
+}
+#logo{
+	margin: 10px 0 ;
+}
+#logo img{
+	width: 200px;
+}
+.main{
+	margin: 0 auto;
+	background-repeat: no-repeat;
+  background-position: center bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	height: 825px;
+}
+.top-text{
+	color: white;
+	font-family: Bebas Neue;
+}
+.top-text h2{
+	font-size: 45px
+}
+.box{
+
+
+}
+.icon{
+
+}
+.hybrid-text{
+    margin-top: -300px;
+    color: #fff;
+}
+.sport-offer, .casino-offer {
+    margin-top: -250px;
+}
+.sport-offer img, .casino-offer img{
+    margin-bottom: -10px;
+}
+
+.casino-offer img, .sport-offer img{
+	width: 300px;
+}
+.sport-term, .casino-term{
+	color: white;
+	text-decoration: underline;
+	margin-bottom: 50px;
+}
+.sport-term a, .casino-term a{
+	color: white;
+}
+.offer{
+	margin-top: 20px;
+    color: white;
+    text-shadow: 0px 1px black;
+    text-align: center;
+
+    padding: 10px;
+
+}
+.offer h1, .icon #clock{
+
+	color: #132352;
+
+    font-family:  Bebas Neue, sans-serif;
+    /*text-shadow: 4px 2px 2px #DC2B2B;*/
+    margin-top: 0;
+    font-size: 6em;
+    line-height: 75px;
+}
+.icon #clock h1{
+	font-size:  44px;
+}
+.icon #clock h2 {
+	margin: 0;
+	font-size: 70px;
+}
+.offer h1 span{
+	font-size: 2em;
+	line-height: 130px;
+	color: #E9FF44;
+
+}
+.offer h2{
+	font-family:  Bebas Neue, sans-serif;
+	margin: 0;
+}
+.offer h2 span{
+	color:red;
+}
+/*************BUTTON******************/
+.button{
+	margin-top: 10px;
+	text-align: center;
+}
+.button img{
+	width: 250px;
+}
+.button a{
+	list-style: none;
+}
+.button a:hover,.button a:focus{
+	text-decoration: none;
+	color: white;
+}
+.green{
+	background-color: #4DA90B;
+    border-bottom: 5px solid #496F2E;
+	text-shadow: 0px -2px #669644;
+}
+.animate{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+.action-button{
+	position: relative;
+	padding: 20px 10%;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;
+}
+.action-button:active{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+.button .CTA-button {
+	display: inline-block;
+	padding: 0.5em 1.2em;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-top: 0.5em;
+    line-height: 2em;
+
+    color: #000;
+    text-shadow: 0px 2px 1px #84ea01;
+    background: url("../images/bg-button.png") center center;
+    background: -webkit-linear-gradient(#84ea01, #4f9700);
+    background: -o-linear-gradient(#84ea01, #4f9700);
+    background: -moz-linear-gradient(#84ea01, #4f9700);
+    background: linear-gradient(#84ea01, #4f9700);
+    border-radius: 5px;
+    box-shadow: #000 2px 2px 4px;
+}
+.button .CTA-button:hover {
+    color: #000;
+    background: -webkit-linear-gradient(#4f9700, #84ea01);
+    background: -o-linear-gradient(#4f9700, #84ea01);
+    background: -moz-linear-gradient(#4f9700, #84ea01);
+    background: linear-gradient(#4f9700, #84ea01);
+}
+.steps{
+	margin-top: 10px;
+}
+.num{
+	border-bottom: 2px solid black;
+}
+.licence{
+	margin-top: 20px;
+}
+.licence img {
+	width: 140px;
+}
+.licence-logo-mobile{
+	margin-top: 20px;
+}
+
+.licence-logo-mobile img{
+	width: 150px;
+}
+.footer-text{
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+	color:#666666;
+}
+.term a{
+	color: white;
+}
+
+ /*==========  Non-Mobile First Method  ==========*/
+/* SUPER Large Devices, Wide Screens */
+@media only screen and (min-width : 2500px) {
+	.main{
+		background-size: contain;
+	}
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.box{
+		padding: 0 0 0 0;
+	}
+	.offer{
+		margin-top: 0px;
+	}
+	.offer h1{
+		font-size: 5em;
+		line-height: 60px;
+	}
+	.steps .container{
+		width: 100%;
+	}
+	.steps .container .col-xs-12{
+		padding: 0;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.container-fluid{
+		width: 100%;
+	}
+	.offer h1{
+		line-height: 55px;
+	}
+
+ }
+
+ /* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.main{
+		height: auto;
+	}
+  .hybrid-text{
+    margin-top: 73%;
+  }
+	.sport-offer, .casino-offer {
+    	margin-top: 4%;
+      padding-bottom: 10px;
+	}
+	.offer{
+		text-align: center;
+
+	}
+
+	.offer h1{
+		line-height: 45px;
+    	font-size: 3.5em;
+
+	}
+	.offer h1 span{
+		line-height: 75px;
+	}
+	.icon #clock h2 {
+	margin: 0;
+	font-size: 35px;
+}
+	.button{
+		text-align: center;
+
+		padding: 0 0 50px 0;
+
+	}
+	.top-text h2{
+		font-size: 30px
+	}
+	.action-button{
+		padding: 10px 10%;
+	}
+
+	.icon #clock h1 {
+    	font-size: 45px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.offer-sec .col-xs-6 {
+    	width: 100%;
+	}
+  .hybrid-text{
+        margin-top: -400px;
+  }
+	.casino-offer {
+    	margin-top: -325px;
+	}
+
+	.sport-offer {
+    	margin-top: -160px;
+	}
+	.main{
+    	height: auto;
+    }
+
+	.offer{
+
+    	padding: 10px;
+	}
+	.offer h1{
+		line-height: 23px;
+		font-size: 2em;
+	}
+	.offer h1 span {
+    	line-height: 45px;
+	}
+	.offer h2{
+		font-size: 25px;
+	}
+	.button{
+		padding: 0 0 10px 0;
+	}
+	.button >.CTA-button {
+		padding: 0.1em 0.1em;
+    	font-size: 1.2em;
+	}
+  .offer-sec .visible-xs{
+		display: none !important;
+	}
+
+	.offer-sec .hidden-xxs{
+		display: none !important;
+	}
+
+	.offer-sec .visible-xxs{
+		display: block !important;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,1 @@
+{include file="pages/landing/netbetcom/terms/sport/normal/welcome-offer/en/welcome-offer.tpl"}

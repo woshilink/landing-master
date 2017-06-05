@@ -1,0 +1,300 @@
+body{
+    background-color: black;
+    font-family: 'Monserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+
+}
+.bg-gold {
+    background-color: #ffbe01;
+}
+.color-gold{color:#ffbe01;}
+.navbar{
+    margin-bottom: 0;
+}
+#logo{
+    margin: 10px 0 ;
+}
+#logo img{
+    width: 200px;
+}
+.logo button{
+    margin-top: 12px;
+}
+nav {
+    background-color: black;
+    color: white;
+}
+.btn {
+    background-color: #171717;
+}
+.main{
+
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.outer-offer {
+    background-color: #fcf3c6;
+    margin-top: 110px;
+    margin-bottom: 85px;
+    margin-left: 20px;
+    margin-right: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    padding-top: 3px;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+}
+.inner-offer {
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+}
+
+.offer{
+    margin-bottom: 60px;
+    margin-top: 70px;
+
+}
+.offer h2 {
+    font-size: 4em;
+    font-weight: bolder;
+    color: black;
+}
+
+.yellow-btn {
+    background: #fbc24c;
+    background: -webkit-linear-gradient(top, #f7e407 0%,#ff6c04 100%);
+    background: linear-gradient(to bottom, #f7e407 0%,#ff6c04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7e407', endColorstr='#ff6c04',GradientType=0);
+    text-shadow: 1px 1px #eeaf36;
+    box-shadow: inset 0 1px 0 #fbc24c;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 3.3em;
+    padding: 10px 30px;
+    display: inline;
+}
+
+
+.steps div  div div:nth-child(1) .step:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    border-left: 27px solid #80130c;
+    margin-top: -23px;
+    margin-left: 340px;
+}
+
+.steps div  div div:nth-child(1) .step{
+    background: #80130c;
+}
+.steps div  div div:nth-child(2) .step:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    border-left: 27px solid #70110b;
+    margin-top: -23px;
+    margin-left: 340px;
+}
+.steps div  div div:nth-child(2) .step{
+    background: #70110b;
+}
+.steps div  div div:nth-child(2) .step:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border: 53px solid #70110b;
+    margin-top: -86px;
+    margin-left: -126px;
+    z-index: -2;
+}
+.steps div  div div:nth-child(3) .step{
+    background: #540a07;
+}
+.steps div  div div:nth-child(3) .step:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border: 53px solid #540a07;
+    margin-top: -86px;
+    margin-left: -126px;
+    z-index: -2;
+}
+.step {
+    padding:20px;
+
+}
+
+
+.step .number h2{
+    font-family: Montserrat,sans-serif;
+    color: #ffbe01;
+    font-size: 4em;
+    line-height: 1.1em;
+    text-align: center;
+    height: 1.1em;
+    border-radius: 50%;
+    background-color: #a91911;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.step h5 {
+    font-family: Oswald,sans-serif;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+footer{
+    margin-top: 20px;
+}
+.legal-text{
+    color: #727272;
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1300px) {
+    .step h5{
+        font-size: 2.5em;
+    }
+    .steps div div  div:nth-child(1) .step:before{
+        margin-left: 273px;
+        border-top: 53px solid transparent;
+        border-bottom: 53px solid transparent;
+    }
+    .steps div div  div:nth-child(2) .step:before{
+        margin-left: 273px;
+        border-top: 53px solid transparent;
+        border-bottom: 53px solid transparent;
+    }
+    .outer-offer {
+
+
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-top: 3px;
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+        -o-transform: skew(0deg);
+    }
+    .inner-offer{
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+        -o-transform: skew(0deg);
+
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .outer-offer{
+        background-color: rgba(255, 249, 218, 0.62);
+    }
+    .offer h2 {
+        font-size: 3em;
+    }
+    .step .number h2 {
+
+        background-color: transparent;
+
+    }
+
+
+    .step .number{
+        background-color: transparent;
+        margin-top: 10px;
+    }
+    .step h5{
+        text-align: center;
+    }
+    .steps div div  div:nth-child(2) .step:after{
+        border:0;
+    }
+    .steps div div  div:nth-child(3) .step:after{
+        border:0;
+    }
+    .steps div div  div:nth-child(1) .step:before{
+        border-left: 279px solid transparent;
+        border-right: 279px solid transparent;
+        border-top: 28px solid #80130c;
+        margin-top: 147px;
+        margin-left: -7px;
+        z-index: 1;
+
+    }
+    .steps div  div div:nth-child(2) .step:before{
+        border-left: 279px solid transparent;
+        border-right: 279px solid transparent;
+        border-top: 28px solid #70110b;
+        margin-top: 147px;
+        margin-left: -7px;
+        z-index: 1;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 769px) {
+    .outer-offer {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .offer {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .step .number{
+        background-color: transparent;
+    }
+    .steps  div div div:nth-child(1) .step:before{
+        border-left: 0;
+        border-right: 0;
+        border-top-color: transparent;
+    }
+    .steps  div div div:nth-child(2) .step:before{
+        border-left: 0;
+        border-right: 0;
+        border-top-color: transparent;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

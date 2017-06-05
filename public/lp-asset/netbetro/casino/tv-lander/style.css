@@ -1,0 +1,51 @@
+.price-wrapper .main-cta-wrapper .main-cta .button-wrapper
+{
+    padding-top: 0;
+}
+.cta-enhanced .price-wrapper .main-cta-wrapper .main-cta .text-1
+{
+    font-size: inherit;
+}
+.middlePaypal, .middlePayment {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background: #111;
+}
+
+.middlePayment .leftPayment, .middlePayment .rightPayment {
+    display: inline;
+}
+.middlePayment .leftPayment{
+    text-align: right;
+}
+.middlePayment .rightPayment{
+    text-align: left;
+}
+.step .number h2{
+    margin-right: 0;
+    float: left;
+    width: 0.47em;
+    text-align: left;
+    color: #acacac;
+    font-size: 7.25em;
+    font-weight: bold;
+    line-height: .9em;
+
+}
+.step .heading{
+    padding: 0 0 0.2em 0;
+    font-family: 'Bebas Neue';
+    font-size: 2em;
+    line-height: 0.95455em;
+    white-space: nowrap;
+    color: #ffcc00;
+    letter-spacing: 0.1em;
+}
+
+.step .text{
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    line-height: 1.28571em;
+    color: white;
+}

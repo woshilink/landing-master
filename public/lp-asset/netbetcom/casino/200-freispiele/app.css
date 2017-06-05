@@ -1,0 +1,70 @@
+body{
+  background-color: #000;
+}
+#main {padding-bottom: 5em;}
+.offer, .slot{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+.offer{
+  margin-top: 10%;
+}
+.slot{
+  margin-top: 15%;
+
+}
+.cta-offer {
+  margin-top: -7em;
+}
+@media (min-width: 1601px){
+
+  .offer, .slot{
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .offer{
+    margin-top: 20%;
+  }
+  .slot{
+    margin-top: 25%;
+
+  }
+  .cta-offer {
+    margin-top: -10em;
+  }
+}
+@media (min-width: 1200px){
+
+  .offer, .slot{
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+  .offer{
+    margin-top: 0%;
+  }
+  .slot{
+    margin-top: 15%;
+
+  }
+}
+
+.middlePaypal, .middlePayment {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  background: #111;
+}
+
+.middlePayment .leftPayment, .middlePayment .rightPayment {background: #111;}
+
+.middlePayment .leftPayment img {display: block; margin-left: auto;}
+.middlePayment .rightPayment img {display: block; margin-right: auto;}
+
+@media screen and (max-width: 992px) {
+  .middlePayment .leftPayment img {margin-right: auto;}
+  .middlePayment .rightPayment img {margin-left: auto;}
+}
+
+.middlePaypal img, .middlePayment img {max-width: 90%;}
+
+#steps .container {margin-top: 48px;}

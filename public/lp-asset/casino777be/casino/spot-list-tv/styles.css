@@ -1,0 +1,169 @@
+body{
+	background-color: #0D0D0D;
+}
+header{
+	background-image: url("../img/bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 458px;
+}
+.lang-selector{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 165px;
+	height: 60px;
+	background-color: rgba(015, 015, 015, 0.6);
+	color: white;
+}
+.dropdown-menu li img, .dropdown button img{
+	width: 20px;
+}
+.btn{
+	background-color: rgba(015, 015, 015,0);
+	color: white;
+}
+.btn:hover {
+	color: yellow;
+}
+.btn:focus{
+	color: #939829;
+}
+.lang-btn{
+	margin-top: 10px;
+	font-size: 18px;
+}
+.dropdown-menu{
+	background-color: rgba(247, 239, 203, 0.85);;
+}
+.navbar{
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+.logo{
+	width: 200px;
+}
+.man{
+	width: 245px;
+    margin-top: -660px;
+    height: 666px;
+}
+.button{
+	margin-top: -355px;
+}
+.button-mobile{
+	margin-top: -35px;
+
+}
+.button-mobile img{
+	max-width: 40%;
+}
+.video{
+	background-image: url('../img/video.png');
+	height: 265px;
+	-webkit-background-size: 100% 108%;
+	background-size: 100% 108%;
+
+	background-repeat: no-repeat;
+}
+.video iframe{
+	padding: 21px 22px;
+    margin-top: 8px;
+}
+.goldline{
+	background-image: url("../img/goldline.png");
+	background-repeat: repeat-x;
+	height: 11px;
+}
+.steps{
+	margin-top: -35px;
+}
+.steps-mobile{
+	padding: 0 30px;
+	margin-top: 10px;
+}
+.footer-img p{
+	color: white;
+	padding: 0px 8%;
+	margin-top: 15px;
+}
+.col.center{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin:0;
+}
+.footer-img{
+	margin: 20px 0;
+}
+
+ /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+		.video iframe{
+			padding: 23px 15px;
+		}
+		.man{
+			margin-top: -655px;
+		}
+		.button {
+    		margin-top: -335px;
+		}
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+     	.button {
+    		margin-top: -266px;
+		}
+		.man {
+    		margin-top: -582px;
+    		height: 590px;
+		}
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+    	header{
+    		background-image: none !important;
+    		height: auto;
+    	}
+    	.container{
+    		padding: 0;
+    	}
+    	.goldline{
+			background-image: none;
+
+			height: 0;
+		}
+		.video{
+			height: 395px;
+    		margin-top: -30px;
+    		background-position-x: -14px;
+    		background-size: 105% 108%;
+    		background-image: none;
+		}
+		.video iframe {
+    		padding: 0;
+    		margin-top: 17px;
+            background-position-x: -10px;
+		}
+    	.steps-mobile{
+			margin-top: 30px;
+		}
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 480px) {
+
+
+    }
+
+    /* Custom, iPhone Retina */
+    @media only screen and (max-width : 320px) {
+
+    }

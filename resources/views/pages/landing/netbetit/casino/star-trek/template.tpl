@@ -1,0 +1,1 @@
+{include file="pages/landing/netbetcouk/casino/aliens/template.tpl" bg='bg.jpg' button='GIOCA ORA' terms='* Termini e Condizioni'}

@@ -1,0 +1,305 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url("../fonts/BebasNeue.otf");
+}
+
+
+
+body{
+    background-color: black;
+}
+.container-fluid{
+    width: 960px;
+}
+nav{
+    background-color: black;
+    color: white;
+}
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+
+}
+.navbar{
+    margin-bottom: 0;
+}
+#logo{
+    margin: 10px 0 ;
+}
+#logo img{
+    width: 200px;
+}
+.main{
+    background-image: url('../img/bg.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 740px;
+}
+.info{
+    margin-top: 25px;
+}
+.info img{
+    width: 331px;
+}
+.box{
+    padding: 22px 0 110px 0;
+
+}
+.offer{
+    margin-top: 0px;
+    color: white;
+    text-shadow: 0px 1px black;
+    text-align: center;
+
+    padding: 10px;
+
+}
+.offer h1{
+
+    color: #ddd;
+
+
+    font-family:  Bebas Neue, sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    margin: 0;
+    font-size: 6em;
+    line-height: 75px;
+}
+.offer h1 span{
+    font-size: 2em;
+    line-height: 130px;
+    color: #E9FF44;
+
+}
+.offer h2{
+    font-family:  Bebas Neue, sans-serif;
+    margin: 0;
+}
+.offer h2 span{
+    color:red;
+}
+/*************BUTTON******************/
+.button{
+    margin-top: 10px;
+    text-align: center;
+}
+.button img{
+    width: 250px;
+}
+.button a{
+    list-style: none;
+}
+.button a:hover,.button a:focus{
+    text-decoration: none;
+    color: white;
+}
+.green{
+    background-color: #4DA90B;
+    border-bottom: 5px solid #496F2E;
+    text-shadow: 0px -2px #669644;
+}
+.animate{
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+.action-button{
+    position: relative;
+    padding: 20px 10%;
+    border-radius: 10px;
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;
+}
+.action-button:active{
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+.de .CTA-button, .nl .CTA-button, .en .CTA-button, .ja .CTA-button, .fr .CTA-button, .ro .CTA-button {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 1.7em;
+    line-height: 2em;
+    color: #000;
+    text-shadow: 0px 2px 1px #84ea01;
+    background: url("../images/bg-button.png") center center;
+    background: -webkit-linear-gradient(#84ea01, #4f9700);
+    background: -o-linear-gradient(#84ea01, #4f9700);
+    background: -moz-linear-gradient(#84ea01, #4f9700);
+    background: linear-gradient(#84ea01, #4f9700);
+    border-radius: 5px;
+    box-shadow: #000 2px 2px 4px;
+}
+.button .CTA-button:hover {
+    color: #000;
+    background: -webkit-linear-gradient(#4f9700, #84ea01);
+    background: -o-linear-gradient(#4f9700, #84ea01);
+    background: -moz-linear-gradient(#4f9700, #84ea01);
+    background: linear-gradient(#4f9700, #84ea01);
+}
+
+.steps{
+    margin-top: 10px;
+}
+.num{
+    border-bottom: 2px solid black;
+}
+.licence{
+    margin-top: 20px;
+}
+.licence img {
+    width: 140px;
+}
+.licence-logo-mobile{
+    margin-top: 20px;
+}
+
+.licence-logo-mobile img{
+    width: 150px;
+}
+.footer-text{
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 12px;
+    color:#666666;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+/* SUPER Large Devices, Wide Screens */
+@media only screen and (min-width : 1920px) {
+    .main{
+        background-size: 100% 100%;
+    }
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+    .main{
+        height: auto;
+
+    }
+    .box{
+        padding: 0 0 0 0;
+
+    }
+    .offer{
+        margin-top: 0px;
+        padding: 70px 0 0 0;
+    }
+    .offer h1{
+        font-size: 5em;
+        line-height: 60px;
+    }
+    .steps .container{
+        width: 100%;
+    }
+    .steps .container .col-xs-12{
+        padding: 0;
+    }
+    .button{
+        padding: 0 0 70px 0;
+    }
+    .button .CTA-button {
+        padding: 0.5em 0.5em;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .container-fluid{
+        width: 100%;
+    }
+    .offer h1{
+        line-height: 55px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+    .offer{
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+    .offer h1{
+        line-height: 45px;
+        font-size: 3.5em;
+
+    }
+    .offer h1 span{
+        line-height: 75px;
+    }
+    .button{
+        text-align: center;
+
+        padding: 0;
+
+    }
+    .button .CTA-button {
+        padding: 0.5em 0.5em;
+    }
+    .action-button{
+        padding: 10px 10%;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .main{
+        height: auto;
+    }
+
+    .offer{
+
+
+
+        padding: 10px;
+    }
+    .offer h1{
+        line-height: 23px;
+        font-size: 2em;
+    }
+    .offer h1 span {
+        line-height: 45px;
+    }
+    .offer h2{
+        font-size: 25px;
+    }
+    .button{
+        padding: 0 0 10px 0;
+    }
+    .button >.CTA-button {
+        padding: 0.1em 2.1em;
+        font-size: 1.2em;
+    }
+
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 900px),
+only screen and (   min--moz-device-pixel-ratio: 2) and (min-width: 900px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (min-width: 900px),
+only screen and (        min-device-pixel-ratio: 2) and (min-width: 900px),
+only screen and (                min-resolution: 192dpi) and (min-width: 900px),
+only screen and (                min-resolution: 2dppx) and (min-width: 900px){
+
+    .offer img{
+        width: 250px;
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

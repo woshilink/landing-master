@@ -1,0 +1,156 @@
+body{
+  background-color: #000;
+  color: #9e9e9e;
+}
+nav{
+  background-color: black;
+  padding: 10px 0;
+}
+.steps-content{
+  margin-top: -140px;
+  margin-bottom: 20px;
+}
+.sports{
+  margin-top: 50px;
+  margin-bottom: 25%;
+}
+.sports img{
+  width: 100%;
+}
+.offer{
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
+.offer img{
+  width: 70%;
+}
+.demo {
+  position: relative;
+  margin: 20px auto;
+  height: 60px;
+  background-color: rgba(18, 18, 18, 0.28);
+  border-radius: 12px;
+  overflow: hidden;
+  border: solid 4px #121212;
+  margin-top: -84px;
+  width: 26%;
+}
+.circle {
+  width:20px;
+  height:20px;
+  background-color:#86cc01;
+  position:absolute;
+  border-radius:50%;
+  display:inline-block;
+  left:-20px;
+  top:4px;
+}
+#button{
+  margin-top: -130px;
+}
+button.btn.btn-lg {
+  padding: 18px 60px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.33333;
+}
+button.btn {
+  margin-top: .5em;
+  border-radius: 5px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(#baff00, #4d8a09);
+  border-top: 2px solid #6acc01;
+  border-bottom: 2px solid #1b1b1b;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 40px;
+  color: #000;
+}
+.step {
+  padding-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.step .number {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+  height: 2em;
+  border: 2px solid #bfbfbf;
+  border-radius: 50%;
+}
+.step h5 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2em;
+    color: #509901;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+.custom-text {
+  font-family: 'Montserrat', sans-serif;
+}
+.custom-text h4 {
+  line-height: 2.8em;
+}
+
+@media only screen and (max-width: 992px) {
+  .custom-text h4 {font-size: 0.9em;}
+}
+
+@media only screen and (max-width: 480px) {
+  .custom-text h4 {line-height: normal;}
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
+    #button {
+        margin-top: -112px;
+    }
+    .steps-content {
+      margin-top: -125px;
+    }
+    .main-content{
+      height: auto
+    }
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+    #button {
+        margin-top: -115px;
+    }
+    .sports {
+      margin-top: 90px;
+      margin-bottom: 6%;
+    }
+    .sports img {
+      width: 100%;
+    }
+    .steps-content {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .offer img {
+      width: 100%;
+    }
+  }
+
+  /* Small Devices, Tablets */
+
+  @media only screen and (max-width : 768px) {
+    .step {
+        padding-left: 70px;
+    }
+  }

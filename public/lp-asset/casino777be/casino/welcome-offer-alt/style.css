@@ -1,0 +1,261 @@
+@font-face {
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-Medium.eot');
+	src: url('fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DINPro-Medium.woff2') format('woff2'),
+		url('fonts/DINPro-Medium.woff') format('woff'),
+		url('fonts/DINPro-Medium.ttf') format('truetype'),
+		url('fonts/DINPro-Medium.svg#DINPro-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-Bold.eot');
+	src: url('fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DINPro-Bold.woff2') format('woff2'),
+		url('fonts/DINPro-Bold.woff') format('woff'),
+		url('fonts/DINPro-Bold.ttf') format('truetype'),
+		url('fonts/DINPro-Bold.svg#DINPro-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-Light.eot');
+	src: url('fonts/DINPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DINPro-Light.woff2') format('woff2'),
+		url('fonts/DINPro-Light.woff') format('woff'),
+		url('fonts/DINPro-Light.ttf') format('truetype'),
+		url('fonts/DINPro-Light.svg#DINPro-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-Black.eot');
+	src: url('fonts/DINPro-Black.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DINPro-Black.woff2') format('woff2'),
+		url('fonts/DINPro-Black.woff') format('woff'),
+		url('fonts/DINPro-Black.ttf') format('truetype'),
+		url('fonts/DINPro-Black.svg#DINPro-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('fonts/DINPro-Regular.eot');
+	src: url('fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DINPro-Regular.woff2') format('woff2'),
+		url('fonts/DINPro-Regular.woff') format('woff'),
+		url('fonts/DINPro-Regular.ttf') format('truetype'),
+		url('fonts/DINPro-Regular.svg#DINPro-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#logo {
+	padding: 10px;
+}
+
+.text-1, .text-2, .text-3 {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "DINPro";
+  font-weight: bold;
+  text-align: center;
+	text-decoration: none;
+}
+
+a:hover {text-decoration: none !important;}
+
+.text-1 {color: #95d600; font-size: 4em; letter-spacing: -.06em; margin-top: 1em; margin-bottom: .5em; display: block;}
+.text-2 {color: #ffffff; font-size: 3.8em; letter-spacing: -.06em;}
+.text-3 {color: #ffffff; font-size: 4em; letter-spacing: -.06em;}
+
+body{background-color:#000}.button{margin-top: 2vw;}.content{min-height:30vw;background-position:50%;background-size:cover;background-repeat:no-repeat}body{background-color:#0f0f0f;font-family:Open Sans,sans-serif}.logo img{width: 165px;}.logo{margin:1em 0;}.selector{z-index:999}.lang-selector{margin-top:10px;text-transform:uppercase;font-family:Open Sans,sans-serif;width:130px;height:40px;background-color:hsla(0,0%,6%,.8);color:#fff;border-radius:0 0 5px 5px;font-size:12px}.lang-btn{background-color:#0f0f0f;text-transform:uppercase;}.btn.active,.btn:active{background-image:none;box-shadow:inset 0px 3px 5px #000000;outline:0px}.steps{margin-top:-30px;margin-bottom:10px;}.btn:hover{color:#fff}.grey-text a{color: white;font-weight:bold;}.grey-text p{font-size:0.8em;color:#b5b5b5;font-family:Open Sans,sans-serif}@media(max-width: 1200px){.button{margin-top: 3vw; margin-bottom: 3vw;}}@media(max-width:1024px){.steps{margin-top:0px;}}@media(max-width:768px){.steps{margin-top:10px}.button{margin-top:3vw;}}
+
+.button {width: 60%; background: #76b338; border-bottom: 10px solid #41651c; margin-left: auto; margin-right: auto;}
+.button a {color: #ffffff; display: block; text-align: center; text-decoration: none; font-family: "DINPro"; font-weight: bold; font-size: 2em; padding-bottom: 1vw;}
+
+.play-now {position: absolute;
+    bottom: 10px;
+    left: 5%;
+    width: 90%;
+    background: #76b338;
+    border-bottom: 10px solid #41651c;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff !important;
+    display: block;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "DINPro";
+    font-weight: bold;
+    font-size: 2em;
+    padding-bottom: .5vw;
+    padding-top: .5vw;}
+
+.step-1, .step-2, .step-3, .upsell-1, .upsell-2, .upsell-3 {
+  padding-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.upsell-1, .upsell-2, .upsell-3 {
+	margin-top: 50px;
+	padding-left: 20px;
+	position: relative;
+}
+
+.step-1 {background-image: url('en/img/step1.png'); background-size: cover; height: 192px;}
+.step-2 {background-image: url('en/img/step2.png'); background-size: cover; height: 192px;}
+.step-3 {background-image: url('en/img/step3.png'); background-size: cover; height: 192px;}
+
+.upsell-1 {background-image: url('en/img/box2.jpg'); background-size: cover; background-position: 60% 90%; height: 300px;}
+.upsell-2 {background-image: url('en/img/box3.jpg'); background-size: cover; background-position: 60% 90%; height: 300px;}
+.upsell-3 {background-image: url('en/img/box1.jpg'); background-size: cover; background-position: 60% 90%; height: 300px;}
+
+.step-1 h5, .step-2 h5, .step-3 h5, .upsell-1 h5, .upsell-2 h5, .upsell-3 h5 {
+  font-family: "DINPro", sans-serif;
+  font-size: 2.5em;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 2px #000000;
+}
+
+.step-1 p, .step-2 p, .step-3 p {
+  color: #999999;
+}
+
+.step-1 .number, .step-2 .number, .step-3 .number {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-family: "DINPro", sans-serif;
+  color: white;
+  font-size: 5em;
+  line-height: 1em;
+  text-align: center;
+  width: 1em;
+  height: 2em;
+  font-weight: 800;
+  text-shadow: 0px 2px 2px #000000;
+}
+
+.step-1 .accent, .step-2 .accent, .step-3 .accent {
+  color: #509901;
+}
+
+.mobile {
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 593px;
+	background-position: bottom;
+}
+
+.footer-blurb {
+	margin-top: 10px;
+	font-size: .8em;
+	font-weight: bold;
+	color: #999;
+}
+
+.casino777_legal {float:right;}
+.casino777_payment {float: left;}
+
+.img-sc {
+	float: right;
+	margin-right: -3px;
+	margin-top: 8px;
+}
+
+.co-logo {
+	margin-top: 1em;
+  max-height: 50px;
+  max-width: 300px;
+	}
+
+.dropdown button span img, .dropdown-menu li a span img {width: 30px;}
+
+@media (min-width: 768px) {
+  .step-1, .step-2, .step-3 {
+    padding-left: 70px;
+    padding-right: 10px;
+  }
+	.step-2 {
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.button {
+		width: 90%;
+		padding: .6em;
+	}
+	.step-1, .step-2, .step-3 {
+		margin-bottom: 20px;
+		min-height: auto;
+		width: 100%;
+		border-radius: 2.5em;
+		background-position: bottom;
+		margin-top: 10px;
+	}
+	.step-3 {
+		min-height: auto;
+		border-radius: 2.5em;
+		background-position: bottom;
+	}
+
+	.text-1 {font-size: 2.9em; line-height: 1em;}
+	.text-2 {font-size: 1.8em; line-height: 1em;}
+	.text-3 {font-size: 2.9em; line-height: 1em;}
+
+	.upsell-1 {background-position: 60% 0%;}
+	.upsell-2 {background-position: 60% 0%;}
+	.upsell-3 {background-position: 60% 13%;}
+
+	.casino777_legal {float:none; width: 100%; text-align: center;}
+	.casino777_payment {float: none; width: 100%; text-align: center;}
+
+	.step-1 h5, .step-2 h5, .step-3 h5, .upsell-1 h5, .upsell-2 h5, .upsell-3 h5 {font-size: 2em;}
+}
+
+@media (max-width: 768px) {
+	.step-1 h5, .step-2 h5, .step-3 h5, .upsell-1 h5, .upsell-2 h5, .upsell-3 h5 {font-size: 2.5em;}
+	.img-sc {float: none; margin-left: auto; margin-right: auto; display: block;}
+}
+
+@media (max-width: 425px) {
+	.step-1, .step-2, .step-3 {
+		height: 206px;
+	}
+}
+
+@media (max-width: 375px) {
+	.step-1, .step-2, .step-3 {
+		height: 184px;
+	}
+}
+
+@media (max-width: 320px) {
+	.step-1, .step-2, .step-3 {
+		height: 155px;
+	}
+	.step-1 h5, .step-2 h5, .step-3 h5 {
+		font-size: 2em;
+	}
+}
+
+#steps {
+  margin-top: -3em;
+}
+
+@media (max-width: 480px) {
+  #steps {margin-top: 0;}
+}

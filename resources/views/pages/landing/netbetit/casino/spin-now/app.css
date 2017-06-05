@@ -1,0 +1,44 @@
+body{
+  background-color: #000;
+}
+.offer, .slot{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+.offer{
+  margin-top: 10%;
+}
+.slot{
+  margin-top: 15%;
+
+}
+@media (min-width: 1601px){
+.container {
+    width: 1300px;
+  }
+  .offer, .slot{
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .offer{
+    margin-top: 20%;
+  }
+  .slot{
+    margin-top: 25%;
+
+  }
+}
+@media (min-width: 1200px){
+
+  .offer, .slot{
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .offer{
+    margin-top: 10%;
+  }
+  .slot{
+    margin-top: 15%;
+
+  }
+}

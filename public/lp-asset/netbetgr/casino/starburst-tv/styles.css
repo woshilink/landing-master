@@ -1,0 +1,253 @@
+body{
+    background-color: black;
+    font-family: 'Monserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+
+}
+.bg-gold {
+    background-color: #ffbe01;
+}
+.color-gold{color:#ffbe01;}
+.navbar{
+    margin-bottom: 0;
+}
+#logo{
+    margin: 10px 0 ;
+}
+#logo img{
+    width: 200px;
+}
+.logo button{
+    margin-top: 12px;
+}
+nav {
+    background-color: black;
+    color: white;
+}
+.btn {
+    background-color: #171717;
+}
+.main{
+
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.outer-offer{
+    background-color: rgba(0, 0, 0, 0.69);
+    margin-bottom: 130px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+
+}
+.offer{
+    margin-bottom: 60px;
+    margin-top: 40px;
+
+}
+.offer h2{
+    font-size: 4em;
+}
+
+.yellow-btn {
+    background: #fbc24c;
+    background: -webkit-linear-gradient(top, #fbc24c 0%,#eeaf36 100%);
+    background: linear-gradient(to bottom, #fbc24c 0%,#eeaf36 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbc24c', endColorstr='#eeaf36',GradientType=0);
+    text-shadow: 1px 1px #eeaf36;
+    box-shadow: inset 0 1px 0 #fbc24c;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 3px;
+    font-size: 2em;
+    padding: 10px 30px;
+    display: inline;
+}
+
+
+.steps div  div div:nth-child(1) .step:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    border-left: 27px solid #464d7b;
+    margin-top: -23px;
+    margin-left: 340px;
+}
+
+.steps div  div div:nth-child(1) .step{
+    background: #464d7b;
+}
+.steps div  div div:nth-child(2) .step:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    border-left: 27px solid #31396c;
+    margin-top: -23px;
+    margin-left: 340px;
+}
+.steps div  div div:nth-child(2) .step{
+    background: #31396c;
+}
+.steps div  div div:nth-child(2) .step:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border: 53px solid #31396c;
+    margin-top: -86px;
+    margin-left: -126px;
+    z-index: -2;
+}
+.steps div  div div:nth-child(3) .step{
+    background: #1a225b;
+}
+.steps div  div div:nth-child(3) .step:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border: 53px solid #1a225b;
+    margin-top: -86px;
+    margin-left: -126px;
+    z-index: -2;
+}
+.step {
+    padding:20px;
+
+}
+
+
+.step .number h2{
+    font-family: Montserrat,sans-serif;
+    color: #ffbe01;
+    font-size: 4em;
+    line-height: 1.1em;
+    text-align: center;
+    height: 1.1em;
+    border-radius: 50%;
+    background-color: #272e56;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.step h5 {
+    font-family: Oswald,sans-serif;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+footer{
+    margin-top: 20px;
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .step h5{
+        font-size: 2.5em;
+    }
+    .steps div div  div:nth-child(1) .step:before{
+        margin-left: 273px;
+        border-top: 53px solid transparent;
+        border-bottom: 53px solid transparent;
+    }
+    .steps div div  div:nth-child(2) .step:before{
+        margin-left: 273px;
+        border-top: 53px solid transparent;
+        border-bottom: 53px solid transparent;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .offer h2 {
+        font-size: 3em;
+    }
+    .step .number h2{
+        background-color: transparent;
+        margin-top: 10px;
+    }
+    .step h5{
+        text-align: center;
+    }
+    .steps div div  div:nth-child(2) .step:after{
+        border:0;
+    }
+    .steps div div  div:nth-child(3) .step:after{
+        border:0;
+    }
+    .steps div div  div:nth-child(1) .step:before{
+        border-left: 279px solid transparent;
+        border-right: 279px solid transparent;
+        border-top: 28px solid #464d7b;
+        margin-top: 147px;
+        margin-left: -7px;
+        z-index: 1;
+
+    }
+    .steps div  div div:nth-child(2) .step:before{
+        border-left: 279px solid transparent;
+        border-right: 279px solid transparent;
+        border-top: 28px solid #31396c;
+        margin-top: 147px;
+        margin-left: -7px;
+        z-index: 1;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .outer-offer {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .offer {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .step .number{
+        background-color: transparent;
+    }
+    .steps  div div div:nth-child(1) .step:before{
+        border-left: 0;
+        border-right: 0;
+        border-top-color: transparent;
+    }
+    .steps  div div div:nth-child(2) .step:before{
+        border-left: 0;
+        border-right: 0;
+        border-top-color: transparent;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

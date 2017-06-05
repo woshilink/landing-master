@@ -1,0 +1,290 @@
+body{
+  background-color: #000;
+}
+.offer, .slot{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+.offer{
+  margin-top: 10%;
+}
+.slot{
+  margin-top: 15%;
+
+}
+.columns{
+  height: 24em;
+  margin-bottom: 20px;
+}
+.upselling{
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+.light-color{
+  background: #000;
+}
+.odds-title-text, .odds-footer-text {
+    line-height: 2em;
+    font-size: 3em;
+    font-family: 'Montserrat',sans-serif;
+    color: #ffffff;
+}
+.custom-text {
+  font-family: 'Montserrat', sans-serif;
+}
+.custom-text h4 {
+  line-height: 2.8em;
+}
+
+@media only screen and (max-width: 992px) {
+  .custom-text h4 {font-size: 0.9em;}
+}
+
+@media only screen and (max-width: 480px) {
+  .custom-text h4 {line-height: normal;}
+}
+.bottom-blocks .item-1 .wrapper .text-2, .bottom-blocks .item-4 .wrapper .text-2, .bottom-blocks .item-3 .wrapper .text-2 {
+    font-size: 1.6em;
+    text-align: center;
+}
+.bottom-blocks .item-1 .wrapper {
+    background-position: center !important; }
+    .bottom-blocks .item-1 .wrapper > div {
+      display: table;
+      width: 100%;
+      height: 100%; }
+      .bottom-blocks .item-1 .wrapper > div > div {
+        display: table-cell;
+        /* vertical-align: middle; */
+        }
+	.bottom-blocks .item-1 .wrapper .text-0 {
+      margin: 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2em;
+      }
+    .bottom-blocks .item-1 .wrapper .text-1 {
+      margin: 0.7em 0 0 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 4em;
+      height: 3em;
+      background: url('casino.jpg');
+      background-position: center;
+      background-size: cover;
+      }
+    .bottom-blocks .item-1 .wrapper .text-2 {
+      margin: 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2.2em;
+        background: #333;
+        color: white;
+      line-height: 2.13em;
+      width: 100.3%;
+      }
+	.bottom-blocks .item-1 .wrapper .text-3 {
+      margin: 1% 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2em; }
+    .bottom-blocks .item-2 .wrapper {
+      background-position: center !important; }
+      .bottom-blocks .item-2 .wrapper > .youtube {
+        display: table;
+        width: 100%;
+        height: 100%;
+        }
+        .bottom-blocks .item-2 .wrapper > div > div {
+          /* display: table-cell; */
+          /* vertical-align: middle; */
+          }
+	  .bottom-blocks .item-2 .wrapper .text-0 {
+      margin: .2em 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2em;
+      }
+      .bottom-blocks .item-2 .wrapper .text-1 {
+        font-family: 'Montserrat',sans-serif;
+        font-size: 5em; }
+      .bottom-blocks .item-2 .wrapper .text-2 {
+        margin: 0;
+        font-family: 'Montserrat',sans-serif;
+        font-size: 2.9em;
+        background: #efefef;
+        color: #1e1e1e;
+        line-height: 1.9em;
+        bottom: 1.17em;
+        position: absolute;
+        width: 97.6%;
+        }
+      .bottom-blocks .item-2 .wrapper .text-3 {
+        font-family: 'Montserrat',sans-serif;
+        font-size: 2em; }
+  .bottom-blocks .item-3 .wrapper {
+    background-position: center !important; }
+    .bottom-blocks .item-3 .wrapper > div {
+      display: table;
+      width: 100%;
+      height: 100%; }
+      .bottom-blocks .item-3 .wrapper > div > div {
+        display: table-cell;
+        /* vertical-align: middle; */
+        }
+	.bottom-blocks .item-3 .wrapper .text-0 {
+      margin: . 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2em;
+      }
+    .bottom-blocks .item-3 .wrapper .text-1 {
+      margin: 0.7em 0 0 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 4em;
+      height: 3em;
+      background: url('//go.netbet.com/casino/double-200/src/img/live-dealers.jpg');
+      background-position: top center;
+      background-size: cover;
+      }
+    .bottom-blocks .item-3 .wrapper .text-2 {
+      margin: 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2.2em;
+      background: #333;
+      color: white;
+      line-height: 2.13em;
+      width: 100.3%;
+      }
+	.bottom-blocks .item-3 .wrapper .text-3 {
+      margin: 1% 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2em; }
+  .bottom-blocks .item-4 .wrapper {
+    background-position: center !important;
+	color: #ffffff;	}
+    .bottom-blocks .item-4 .wrapper > div {
+      display: table;
+      width: 100%;
+      height: 100%;
+      }
+      .bottom-blocks .item-4 .wrapper > div > div {
+        display: table-cell;
+        /* vertical-align: middle; */
+        }
+	.bottom-blocks .item-4 .wrapper .text-0 {
+      margin: 0;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 2em;
+      }
+    .bottom-blocks .item-4 .wrapper .text-1 {
+		margin: 0.7em 0 0 0;
+		font-family: 'Montserrat',sans-serif;
+		font-size: 4em;
+		height: 3em;
+		background: url('//go.netbet.com/casino/double-200/src/img/promotions-new.jpg');
+		background-position: center;
+		background-size: cover;
+    	width: 100.3%;
+		}
+    .bottom-blocks .item-4 .wrapper .text-2 {
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2.2em;
+        background: #333;
+        color: white;
+    line-height: 2.13em;
+    width: 100.3%; }
+
+
+.bottom-blocks .wrapper .text-0 {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  color: white;
+  text-align: center;
+}
+.bottom-blocks .row .wrapper .button-wrapper {
+    position: absolute;
+    right: 1.5em;
+    bottom: 1em;
+}
+.bottom-blocks .row .wrapper.light-color .button {
+    color: #fafafa;
+    text-shadow: none;
+    font-weight: normal;
+}
+.bottom-blocks .row .wrapper .button {
+    background: transparent;
+    margin: 5% 0 0 0;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+}
+@media (min-width: 1601px){
+  .container {
+    width: 1300px;
+  }
+
+  .offer, .slot{
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .offer{
+    margin-top: 20%;
+  }
+  .slot{
+    margin-top: 25%;
+
+  }
+}
+@media (min-width: 1200px){
+  .offer, .slot{
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .offer{
+    margin-top: 10%;
+  }
+  .slot{
+    margin-top: 15%;
+  }
+  .bottom-blocks .item-1 .wrapper .text-2, .bottom-blocks .item-4 .wrapper .text-2, .bottom-blocks .item-3 .wrapper .text-2{
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 992px){
+
+  .bottom-blocks .item-1 .wrapper .text-2, .bottom-blocks .item-4 .wrapper .text-2, .bottom-blocks .item-3 .wrapper .text-2{
+    font-size: 1.2em;
+  }
+  .odds-title-text, .odds-footer-text {
+    font-size: 2em;
+  }
+  .item{
+    margin-bottom: 10px;
+  }
+  .bottom-blocks .row .wrapper .button {
+    font-size: 15px;
+  }
+  .columns{
+    height: 20.5em;
+  }
+  footer .row {
+    text-align: center;
+  }
+
+}
+
+.middlePaypal, .middlePayment {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  background: #111;
+}
+
+.middlePayment .leftPayment img {display: block; margin-left: auto;}
+.middlePayment .rightPayment img {display: block; margin-right: auto;}
+
+@media screen and (max-width: 992px) {
+  .middlePayment .leftPayment img {margin-right: auto;}
+  .middlePayment .rightPayment img {margin-left: auto;}
+}
+
+.middlePaypal img, .middlePayment img {max-width: 90%;}

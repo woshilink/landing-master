@@ -1,0 +1,273 @@
+body{
+	    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #0B0B09;
+ }
+.offscreen{
+	position: absolute;
+	margin-top: -5000px;
+}
+.navbar{
+	margin-bottom: 0;
+}
+.bg-gray{
+	background-color: #262626;
+}
+.logo{
+	margin: 10px 0;
+}
+.logo img{
+	width: 200px;
+}
+.header-text{
+	color: white;
+	margin-top: 15px;
+}
+.main{
+
+	-webkit-background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 649px;
+
+}
+.offer{
+	margin-top: 130px;
+}
+.button{
+	margin-top: 20px;
+}
+.nav-tabs{
+  border-bottom:0;
+  margin-top: 10px;
+}
+.nav-tabs  li a{
+  padding: 5px 15px;
+	color: white;
+}
+.nav-tabs  li a  img{
+  width: 25px;
+}
+
+.nav-tabs  li  a{
+display: inline-block;
+ vertical-align: middle;
+ -webkit-transform: translateZ(0);
+ transform: translateZ(0);
+ -webkit-backface-visibility: hidden;
+ backface-visibility: hidden;
+ -moz-osx-font-smoothing: grayscale;
+ position: relative;
+ overflow: hidden;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: white;
+		border: 1px solid dimgray;
+    border-bottom-color:dimgray;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+
+    background-color: dimgray;
+}
+.nav-tabs  li  a:before{
+  content: "";
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   border-color: gold;
+   border-style: solid;
+   border-width: 0;
+   -webkit-transition-property: border-width;
+   transition-property: border-width;
+   -webkit-transition-duration: 0.1s;
+   transition-duration: 0.1s;
+   -webkit-transition-timing-function: ease-out;
+   transition-timing-function: ease-out;
+  border-radius: 50%;
+}
+ .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: dimgray;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 50%;
+}
+
+.nav-tabs > li> a:hover, .nav-tabs > li> a:focus, .nav-tabs > li> a:active {
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+}
+.nav-tabs li a:hover:before, .nav-tabs li a:focus:before, .nav-tabs li a:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  border-width: 4px;
+}
+.frame{
+	margin-top: 55px;
+	background-image: url('../img/frame.png');
+	-webkit-background-size: contain;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.frame video{
+	padding: 6%;
+}
+.steps-live{
+	background-image: url('../img/steps_bg.png');
+	background-repeat: repeat-x;
+}
+#step1, #step2, #step3 {
+    background-color: #161616;
+    margin-top: 20px;
+}
+.steps, .steps-live{
+	margin-top: 5px;
+	margin-bottom: 50px;
+}
+
+.step .row div {
+    vertical-align: middle;
+    padding: 10px;
+}
+.step-title {
+    font-size: 2.4em;
+    color: #e5b24f;
+}
+.step-text {
+    font-size: 1.6em;
+    color: #fff;
+}
+.step-num > p {
+    font-size: 6em;
+    color: #e5b24f;
+    text-align: center;
+    padding-left: 25px !important;
+    padding-right: 5px !important;
+}
+.step {
+    background-color: #1c1c1c;
+    border: 1px solid #323232;
+    margin-bottom: 0.5em;
+}
+
+.col.center{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin:0;
+}
+.terms p{
+	font-size: 12px;
+	color:#8F8F8F;
+	margin-top:.5em;
+	margin-bottom:10px;
+}
+.terms p span, .terms p a{
+	color: #8F8F8F;
+	text-decoration: underline;
+}
+.terms a:hover{
+	text-decoration: none;
+}
+.licence{
+	margin-top: 20px;
+}
+.licence img{
+	width: 140px;
+}
+.licence-logo-mobile{
+	margin-top: 20px;
+}
+
+.licence-logo-mobile img{
+	width: 150px;
+}
+.footer-text{
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+	color:#666666;
+}
+.game img{
+	width: 378px;
+
+}
+.valid-text{
+	margin-top:10em;
+	font-size:0.85em;
+	color:#616161;
+}
+.margin-bot10{
+ 	margin-bottom: 10px;
+}
+.banner {
+		display: block;
+		position: absolute;
+		top: 75px;
+		right: 0;
+}
+ /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+		.frame{
+			margin-top: 100px;
+		}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+		.frame{
+			margin-top: 120px;
+			float: right;
+
+		}
+		.left-box{
+			margin-left: -4%;
+		}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    	.main{
+
+    		height: auto;
+    		background-image: none;
+    	}
+    	.frame{
+    		margin-top: 0;
+    		background-size: 97% 102%;
+    	}
+    	.header-text{
+    		margin-top: 0;
+    	}
+    	.button{
+    		margin-top: 20px;
+    	}
+    	.steps-live{
+			background-image: none;
+		}
+		.terms{
+			text-align: center;
+		}
+		.banner {display: none;}
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */
+    @media only screen and (max-width : 320px) {
+
+    }

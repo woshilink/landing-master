@@ -1,0 +1,235 @@
+
+#logo{
+	width: 150px;
+	margin-bottom: 10px;
+}
+
+body{
+	background-color: black;
+}
+.container-fluid{
+	 width: 1170px;
+}
+
+.leftPayment{
+  text-align: right;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+
+}
+.navbar{
+	margin-bottom: 0;
+}
+#logo{
+	margin-top: 10px;
+}
+#logo img{
+}
+.co-logo img{
+	margin-top: 5px;
+	max-height: 50px;
+}
+/*Offer*/
+.offer .text, .infoText .text{
+  color: #FFF;
+
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 11px;
+  text-transform: uppercase;
+}
+
+.offer{
+  margin-top: 170px;
+}
+.offer .text{
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  line-height: 69px;
+  background-color: #169ecf;
+
+  padding: 0px 5px;
+
+}
+.infoText .text{
+  margin-top: 15px;
+  font-size: 21px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.55);
+
+}
+
+/*Button*/
+.button{
+  margin-top: 15px;
+  margin-bottom: 150px;
+}
+.button .CTA-button {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 1.7em;
+  line-height: 2em;
+  color: #d9edf7;
+  text-shadow: 0px 2px 1px #D41F27;
+  background: -webkit-linear-gradient(#D31F27, #C81F26);
+  background: -o-linear-gradient(#84ea01, #4f9700);
+  background: -moz-linear-gradient(#84ea01, #4f9700);
+  background: linear-gradient(#d6252c, #ba0108);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.33) 2px 2px 32px;
+
+}
+.button .CTA-button:hover {
+
+  background: -o-linear-gradient(#ba0108, #d6252c);
+  background: -moz-linear-gradient(#ba0108, #d6252c);
+  background: linear-gradient( #ba0108, #d6252c);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.33) 2px 2px 32px;
+
+}
+  .offer h1 {
+
+}
+
+ /*==========  Non-Mobile First Method  ==========*/
+/* SUPER Large Devices, Wide Screens */
+@media only screen and (min-width : 1920px) {
+	.main{
+		background-size: 100% 100%;
+	}
+
+}
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1200px) {
+  .container-fluid{
+     width: 100%;
+   }
+   .offer .text {
+     font-size: 3em;
+   }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .middlePayment{
+    text-align: center;
+  }
+  .leftPayment , .rightPayment {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .offer .text, .infoText .text{
+      width: 90%;
+  }
+  .offer{
+    margin-top: 50px;
+  }
+
+  .button{
+    margin: 50px;
+  }
+
+}
+
+ /* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+  .offer{
+    margin-top: 10px;
+    }
+  .offer .text, .infoText .text{
+      width: 100%;
+  }
+  .offer .text {
+    font-size: 2em;
+  }
+  .infoText .text {
+    font-size: 1em;
+  }
+
+  .button{
+    margin: 0;
+  }
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+.shiny-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.shiny-button::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 80px;
+  width: 600px;
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2));
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-animation-name: shine;
+          animation-name: shine;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: cubic-beizer(0.17, 0.79, 0.96, 0.25);
+          animation-timing-function: cubic-beizer(0.17, 0.79, 0.96, 0.25);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    top: -150px;
+    left: -300px;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    top: -150px;
+    left: -300px;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+  .middlePaypal {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background: #111;
+  }
+
+  .middlePaypal img {max-width: 90%;}
