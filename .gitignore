@@ -1,0 +1,11 @@
+.idea
+vendor
+Homestead
+.json
+Homestead
+.yaml
+.env
+composer.phar
+/storage/framework/smarty/
+composer.phar
+node_modules
